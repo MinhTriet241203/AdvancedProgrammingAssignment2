@@ -15,6 +15,7 @@ M và D coi trong A1 template từ mục 4 giới thiệu về design patterns t
 # Guide to edit this project
 
 Install the developer pack for [.NET Framework 4.8.1](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net481-developer-pack-offline-installer)
+
 Launch the AdvancedProgrammingAssignment2.sln file in repository folder
 ![Launch the AdvancedProgrammingAssignment2.sln](https://user-images.githubusercontent.com/111042904/207403818-579fc438-bd49-49fa-bb53-7936544e0396.png)
 Choose the Designer tab to drag and drop components 
