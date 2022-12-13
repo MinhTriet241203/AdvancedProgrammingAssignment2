@@ -1,7 +1,7 @@
 # AdvancedProgrammingAssignment2
 This is quite a long name but I don't know what else is better
 
-<span style="color: yellow">**Notes for Assignment 2 format**</span>
+<span style="color: yellow"> **Notes for Assignment 2 format** </span>
 
 1.1. nói về report và nói về các thành viên trong nhóm
 Phần 1 viết lý thuyết theo file trên cms 
