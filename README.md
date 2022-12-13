@@ -25,4 +25,4 @@ Launch the AdvancedProgrammingAssignment2.sln file in repository folder
 
 Choose the Designer tab to drag and drop components 
 
-![Choose the Designer tab](https://user-images.githubusercontent.com/111042904/207404406-a980e767-f555-45bf-a82d-a951393bf047.png)
+![Choose the Designer tab](https://user-images.githubusercontent.com/111042904/207405296-7796fd53-5de6-44d9-b7d8-2692e5d6cd80.png)
