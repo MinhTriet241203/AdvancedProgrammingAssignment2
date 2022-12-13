@@ -1,4 +1,4 @@
-# AdvancedProgrammingAssignment2
+# Advanced Programming Assignment2
 This is quite a long name but I don't know what else is better
 
 # Notes for Assignment 2 format
