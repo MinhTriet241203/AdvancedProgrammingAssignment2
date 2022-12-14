@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using MongoDB.Driver;
 
 namespace AdvancedProgrammingAssignment2
 {
@@ -9,8 +11,26 @@ namespace AdvancedProgrammingAssignment2
         ///     The main entry point for the application.
         /// </summary>
         [STAThread]
+        
+        //Set additional output as console
+        [DllImport( "kernel32.dll" )]
+        static extern bool AttachConsole( int dwProcessId );
+        private const int ATTACH_PARENT_PROCESS = -1;
+        
         private static void Main()
         {
+            AttachConsole( ATTACH_PARENT_PROCESS );
+            var settings = MongoClientSettings.FromConnectionString("mongodb+srv://admin:HWiRjWnroiKmcyQw@librarymanagement.io7gmky.mongodb.net/?retryWrites=true&w=majority");
+            settings.ServerApi = new ServerApi(ServerApiVersion.V1);
+            var client = new MongoClient(settings);
+            var database = client.ListDatabases().ToList();
+            
+            Console.WriteLine("The list of databases on this server is: ");
+            foreach (var db in database)
+            {
+                Console.WriteLine(db);
+            }
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LibraryApp());
