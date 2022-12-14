@@ -145,11 +145,20 @@
             <DependentUpon>LibraryApp.cs</DependentUpon>
         </Compile>
         <Compile Include="Librarian.cs" />
+        <Compile Include="ProgessForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="ProgessForm.Designer.cs">
+          <DependentUpon>ProgessForm.cs</DependentUpon>
+        </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="User.cs" />
         <EmbeddedResource Include="LibraryApp.resx">
             <DependentUpon>LibraryApp.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="ProgessForm.resx">
+          <DependentUpon>ProgessForm.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>

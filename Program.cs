@@ -31,7 +31,7 @@ namespace AdvancedProgrammingAssignment2
             //Run the form
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LibraryApp());
+            Application.Run(new ProgessForm());
         }
     }
 }
