@@ -27,10 +27,6 @@ namespace AdvancedProgrammingAssignment2
             var settings = MongoClientSettings.FromConnectionString("mongodb+srv://admin:HWiRjWnroiKmcyQw@librarymanagement.io7gmky.mongodb.net/?retryWrites=true&w=majority");
             settings.ServerApi = new ServerApi(ServerApiVersion.V1);
             var client = new MongoClient(settings);
-            
-            var filter = Builders<BsonDocument>.Filter.ElemMatch<BsonValue>("scores", new BsonDocument { 
-                { "type", "exam" }, {"score", new BsonDocument { { "$lt", 60 }}}
-            });
 
             //Run the form
             Application.EnableVisualStyles();
