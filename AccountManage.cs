@@ -7,15 +7,14 @@ namespace AdvancedProgrammingAssignment2
 {
     public class AccountManage
     {
-        static MongoClientSettings settings = MongoClientSettings.FromConnectionString(
+        //mongoURL
+        private static readonly MongoClientSettings Settings = MongoClientSettings.FromConnectionString(
             "mongodb+srv://admin:HWiRjWnroiKmcyQw@librarymanagement.io7gmky.mongodb.net/?retryWrites=true&w=majority");
 
-        static MongoClient client = new MongoClient(settings);
+        private static readonly MongoClient Client = new MongoClient(Settings);
+        private static readonly IMongoDatabase Database = Client.GetDatabase("LibrarySystem");
 
-        //setting up connection to db
-        static IMongoDatabase database = client.GetDatabase("LibrarySystem");
-
-        static IMongoCollection<Account> collection = database.GetCollection<Account>("Accounts");
+        private static readonly IMongoCollection<Account> Collection = Database.GetCollection<Account>("Accounts");
         //reaching into the account table
 
         private List<Account> _accountsList = new List<Account>();
@@ -23,24 +22,24 @@ namespace AdvancedProgrammingAssignment2
         public static void AddAdmin(string email, string password, string name)
         {
             Admin adminAccount = new Admin(email, name, password);
-            collection.InsertOne(adminAccount);
+            Collection.InsertOne(adminAccount);
         }
 
         public static void AddLibrarian(string email, string password, string name)
         {
             Librarian librarianAccount = new Librarian(email, name, password);
-            collection.InsertOne(librarianAccount);
+            Collection.InsertOne(librarianAccount);
         }
 
         public static void AddUser(string email, string password, string name)
         {
             User userAccount = new User(email, name, password);
-            collection.InsertOne(userAccount);
+            Collection.InsertOne(userAccount);
         }
 
         public static void RemoveAccount(ObjectId id)
         {
-            collection.DeleteOne(a => a.Id == id);
+            Collection.DeleteOne(a => a.Id == id);
         }
 
         public static void UpdateAccount(string id, string password, string name)
@@ -48,7 +47,7 @@ namespace AdvancedProgrammingAssignment2
             var updateDefinition = Builders<Account>.Update
                 .Set(a => a.Password, password)
                 .Set(a => a.Name, name);
-            collection.UpdateOne(a => a.Id.Equals(id), updateDefinition);
+            Collection.UpdateOne(a => a.Id.Equals(id), updateDefinition);
         }
     }
 }

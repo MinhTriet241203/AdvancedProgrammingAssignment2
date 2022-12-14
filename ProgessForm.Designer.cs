@@ -56,7 +56,7 @@ namespace AdvancedProgrammingAssignment2
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(277, 37);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Library Management";
+            this.label1.Text = "Library Management System";
             // 
             // label2
             // 
