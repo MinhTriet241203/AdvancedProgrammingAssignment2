@@ -5,11 +5,11 @@ namespace AdvancedProgrammingAssignment2
 {
     public class Account
     {
-        [BsonId] protected ObjectId Id { get; set; }
+        [BsonId] internal ObjectId Id { get; set; }
         [BsonElement("email"), BsonRequired] private string Email { get; set; }
-        [BsonElement("name")] private string Name { get; set; }
-        [BsonElement("password")] private string Password { get; set; }
-        [BsonElement("class")] protected string AccountClass { get; set; }
+        [BsonElement("name")] internal string Name { get; set; }
+        [BsonElement("password")] internal string Password { get; set; }
+        [BsonElement("class")] internal string AccountClass { get; set; }
 
         protected Account(string email, string name, string password, string accountClass)
         {

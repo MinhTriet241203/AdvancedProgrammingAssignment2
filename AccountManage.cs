@@ -22,30 +22,33 @@ namespace AdvancedProgrammingAssignment2
 
         public static void AddAdmin(string email, string password, string name)
         {
-            Admin adminAccount = new Admin(email, password, name);
+            Admin adminAccount = new Admin(email, name, password);
             collection.InsertOne(adminAccount);
         }
 
         public static void AddLibrarian(string email, string password, string name)
         {
-            Librarian librarianAccount = new Librarian(email, password, name);
+            Librarian librarianAccount = new Librarian(email, name, password);
             collection.InsertOne(librarianAccount);
         }
 
         public static void AddUser(string email, string password, string name)
         {
-            User userAccount = new User(email, password, name);
+            User userAccount = new User(email, name, password);
             collection.InsertOne(userAccount);
         }
 
         public static void RemoveAccount(ObjectId id)
         {
-            //todo: remove from list and db.
+            collection.DeleteOne(a => a.Id == id);
         }
 
-        public static void UpdateAccount(string id)
+        public static void UpdateAccount(string id, string password, string name)
         {
-            //todo: add method that updates account, class not included.
+            var updateDefinition = Builders<Account>.Update
+                .Set(a => a.Password, password)
+                .Set(a => a.Name, name);
+            collection.UpdateOne(a => a.Id.Equals(id), updateDefinition);
         }
     }
 }
