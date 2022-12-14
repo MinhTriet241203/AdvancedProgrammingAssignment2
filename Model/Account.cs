@@ -1,10 +1,11 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace AdvancedProgrammingAssignment2
+namespace AdvancedProgrammingAssignment2.Model
 {
     public class Account
     {
+        //setup BsonElement for database use
         [BsonId] internal ObjectId Id { get; set; }
         [BsonElement("email"), BsonRequired] private string Email { get; set; }
         [BsonElement("name")] internal string Name { get; set; }

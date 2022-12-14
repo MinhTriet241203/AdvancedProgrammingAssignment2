@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace AdvancedProgrammingAssignment2
+namespace AdvancedProgrammingAssignment2.View
 {
     partial class ProgessForm
     {

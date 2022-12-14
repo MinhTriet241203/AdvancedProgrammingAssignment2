@@ -1,4 +1,13 @@
-﻿# Connect to DB
+﻿Below is the sample code for connecting to the database on mongodb.
+Rider supports DB connection to view and manage db as well, so there is no need to get atlas
+
+# Connect to db via IDE, different from via code
+
+drop the url in here and connect to mongodb via the IDE
+
+![img_1.png](img_1.png)
+
+# Connect to DB in code
 
 ```csharp
 var settings = MongoClientSettings.FromConnectionString("mongodb+srv://admin:HWiRjWnroiKmcyQw@librarymanagement.io7gmky.mongodb.net/?retryWrites=true&w=majority");

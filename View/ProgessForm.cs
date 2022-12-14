@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace AdvancedProgrammingAssignment2
+namespace AdvancedProgrammingAssignment2.View
 {
     public partial class ProgessForm : Form     //typo here
     {

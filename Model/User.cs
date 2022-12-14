@@ -1,4 +1,4 @@
-﻿namespace AdvancedProgrammingAssignment2
+﻿namespace AdvancedProgrammingAssignment2.Model
 {
     public class User : Account
     {

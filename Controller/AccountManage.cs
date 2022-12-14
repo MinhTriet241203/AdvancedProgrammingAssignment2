@@ -1,9 +1,9 @@
-using System;
 using System.Collections.Generic;
+using AdvancedProgrammingAssignment2.Model;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
-namespace AdvancedProgrammingAssignment2
+namespace AdvancedProgrammingAssignment2.Controller
 {
     public class AccountManage
     {
