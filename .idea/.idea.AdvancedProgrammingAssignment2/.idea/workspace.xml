@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75574541-18c9-4472-9b8a-5fa1c234590e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Account.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Librarian.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/User.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AdvancedProgrammingAssignment2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdvancedProgrammingAssignment2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdvancedProgrammingAssignment2.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedProgrammingAssignment2.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Form1.Designer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +73,7 @@
       <workItem from="1670980559131" duration="151000" />
       <workItem from="1670980731657" duration="77000" />
       <workItem from="1670980827873" duration="4660000" />
+      <workItem from="1670986737579" duration="340000" />
     </task>
     <servers />
   </component>
