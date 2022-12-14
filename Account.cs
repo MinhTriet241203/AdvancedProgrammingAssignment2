@@ -1,4 +1,6 @@
-﻿namespace AdvancedProgrammingAssignment2
+﻿using MongoDB.Driver;
+
+namespace AdvancedProgrammingAssignment2
 {
     public class Account
     {
@@ -24,5 +26,6 @@
             _name = name;
             _password = password;
         }
+
     }
 }
