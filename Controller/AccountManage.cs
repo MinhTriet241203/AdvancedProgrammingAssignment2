@@ -47,7 +47,7 @@ namespace AdvancedProgrammingAssignment2.Controller
 
         //this part updates the accounts with new information regarding the password and name.
         //it then updates the account with matching [Id] with the new information.
-        public static void UpdateAccount(string id, string password, string name)
+        public static void UpdateAccount(ObjectId id, string password, string name)
         {
             var updateDefinition = Builders<Account>.Update
                 .Set(a => a.Password, password)
