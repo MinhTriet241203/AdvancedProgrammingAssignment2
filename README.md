@@ -26,3 +26,7 @@ Launch the AdvancedProgrammingAssignment2.sln file in repository folder
 Choose the Designer tab to drag and drop components 
 
 ![Choose the Designer tab](https://user-images.githubusercontent.com/111042904/207405296-7796fd53-5de6-44d9-b7d8-2692e5d6cd80.png)
+
+Install the NuGet package to connect to MongoDB
+
+![image](https://user-images.githubusercontent.com/111042904/207504004-e46d1367-ec77-4d11-a622-63cb409a6236.png)
