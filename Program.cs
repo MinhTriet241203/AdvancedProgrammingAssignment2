@@ -28,22 +28,10 @@ namespace AdvancedProgrammingAssignment2
             settings.ServerApi = new ServerApi(ServerApiVersion.V1);
             var client = new MongoClient(settings);
             
-            //Get collection
-            var collection = client.GetDatabase("LibrarySystem").GetCollection<BsonDocument>("Books");
-            //Read all documents in the DB
-            var allDocuments = collection.Find(new BsonDocument()).ToList();
-            foreach (var doc in allDocuments)
-            {
-                Console.WriteLine(doc.ToString());
-            }
-            //Read with filter
-            var filter = Builders<BsonDocument>.Filter.Eq("isbn", "ISBN here");
-            var aDocument = collection.Find(filter).ToList();
-            foreach (var doc in aDocument)
-            {
-                Console.WriteLine(doc.ToString());
-            }
-            
+            var filter = Builders<BsonDocument>.Filter.ElemMatch<BsonValue>("scores", new BsonDocument { 
+                { "type", "exam" }, {"score", new BsonDocument { { "$lt", 60 }}}
+            });
+
             //Run the form
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

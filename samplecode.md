@@ -5,7 +5,7 @@ settings.ServerApi = new ServerApi(ServerApiVersion.V1);
 var client = new MongoClient(settings);
 ```
 
-### Get DBs
+## Get DBs
 ```csharp
 //Get databases on server
 var database = client.ListDatabases().ToList();
@@ -58,3 +58,35 @@ foreach (var doc in aDocument)
 }
 ```
 [Reference](https://www.mongodb.com/blog/post/quick-start-c-and-mongodb-read-operations)
+
+# Update document in DB
+```csharp
+//Get collection
+var collection = client.GetDatabase("LibrarySystem").GetCollection<BsonDocument>("Books");
+//Filter to choose what document to update
+var filter = Builders<BsonDocument>.Filter.Eq("isbn", "ISBN here");
+//Set new values
+var update = Builders<BsonDocument>.Update.Set("isbn", "Insert ISBN here")
+    .Set("book_name", "Book name here").Set("category", "Category _id").Set("author", "Author _id here")
+    .Set("image", "Image link here").Set("availability", "Availability here");
+
+collection.UpdateOne(filter, update);
+```
+[Reference](https://www.mongodb.com/blog/post/quick-start-csharp-and-mongodb-update-operation)
+
+# Delete document in DB
+```csharp
+//Get collection
+var collection = client.GetDatabase("LibrarySystem").GetCollection<BsonDocument>("Books");
+//Filter to delete
+var filter = Builders<BsonDocument>.Filter.Eq("isbn", "Insert ISBN here");
+collection.DeleteOne(filter);
+```
+[Reference](https://www.mongodb.com/blog/post/quick-start-csharp-and-mongodb-delete-operations)
+
+# More advanced filter
+```csharp
+var filter = Builders<BsonDocument>.Filter.ElemMatch<BsonValue>("scores", new BsonDocument { 
+    { "type", "exam" }, {"score", new BsonDocument { { "$lt", 60 }}}
+});
+```
