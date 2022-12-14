@@ -29,4 +29,4 @@ Choose the Designer tab to drag and drop components
 
 Install the NuGet package to connect to MongoDB
 
-![image](https://user-images.githubusercontent.com/111042904/207504004-e46d1367-ec77-4d11-a622-63cb409a6236.png)
+![image](https://user-images.githubusercontent.com/111042904/207504090-9bc34a25-a782-428f-b0b7-bf49b27525de.png)
