@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace AdvancedProgrammingAssignment2
 {
@@ -7,6 +8,11 @@ namespace AdvancedProgrammingAssignment2
         public LibraryApp()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
