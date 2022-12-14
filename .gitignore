@@ -4,3 +4,7 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+libmongocrypt.dylib
+libmongocrypt.so
+mongocrypt.dll
+packages.config
