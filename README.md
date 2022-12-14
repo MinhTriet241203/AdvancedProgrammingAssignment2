@@ -30,3 +30,4 @@ Choose the Designer tab to drag and drop components
 Install the NuGet package to connect to MongoDB
 
 ![image](https://user-images.githubusercontent.com/111042904/207504090-9bc34a25-a782-428f-b0b7-bf49b27525de.png)
+[Reference](https://www.mongodb.com/blog/post/quick-start-c-sharp-and-mongodb-starting-and-setup)
