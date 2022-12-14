@@ -24,12 +24,6 @@ namespace AdvancedProgrammingAssignment2
             //Init console for testing
             AttachConsole(ATTACH_PARENT_PROCESS);
 
-            //Connect to DB
-            MongoClientSettings settings = MongoClientSettings.FromConnectionString(
-                "mongodb+srv://admin:HWiRjWnroiKmcyQw@librarymanagement.io7gmky.mongodb.net/?retryWrites=true&w=majority");
-            settings.ServerApi = new ServerApi(ServerApiVersion.V1);
-            MongoClient client = new MongoClient(settings);
-
             //Run the form
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

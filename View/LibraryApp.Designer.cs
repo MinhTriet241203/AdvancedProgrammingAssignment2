@@ -38,7 +38,9 @@
             this.buttonCategories = new FontAwesome.Sharp.IconButton();
             this.buttonDashboard = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
+            this.panelLogo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -95,6 +97,7 @@
             // 
             // buttonBooks
             // 
+            this.buttonBooks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.buttonBooks.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.buttonBooks, "buttonBooks");
             this.buttonBooks.FlatAppearance.BorderSize = 0;
@@ -104,10 +107,11 @@
             this.buttonBooks.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonBooks.IconSize = 40;
             this.buttonBooks.Name = "buttonBooks";
-            this.buttonBooks.UseVisualStyleBackColor = true;
+            this.buttonBooks.UseVisualStyleBackColor = false;
             // 
             // buttonCategories
             // 
+            this.buttonCategories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.buttonCategories.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.buttonCategories, "buttonCategories");
             this.buttonCategories.FlatAppearance.BorderSize = 0;
@@ -117,12 +121,12 @@
             this.buttonCategories.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonCategories.IconSize = 40;
             this.buttonCategories.Name = "buttonCategories";
-            this.buttonCategories.UseVisualStyleBackColor = true;
+            this.buttonCategories.UseVisualStyleBackColor = false;
             this.buttonCategories.Click += new System.EventHandler(this.buttonCategories_Click);
-
             // 
             // buttonDashboard
             // 
+            this.buttonDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.buttonDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.buttonDashboard, "buttonDashboard");
             this.buttonDashboard.FlatAppearance.BorderSize = 0;
@@ -132,26 +136,37 @@
             this.buttonDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonDashboard.IconSize = 40;
             this.buttonDashboard.Name = "buttonDashboard";
-            this.buttonDashboard.UseVisualStyleBackColor = true;
+            this.buttonDashboard.UseVisualStyleBackColor = false;
             this.buttonDashboard.Click += new System.EventHandler(this.buttonDashboard_Click);
             // 
             // panelLogo
             // 
             resources.ApplyResources(this.panelLogo, "panelLogo");
-            this.panelLogo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panelLogo.Controls.Add(this.panel1);
+            this.panelLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelLogo.ForeColor = System.Drawing.Color.Black;
             this.panelLogo.Name = "panelLogo";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
             // 
             // LibraryApp
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LibraryApp";
             this.panelMenu.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Panel panel1;
 
         private FontAwesome.Sharp.IconButton buttonAccounts;
         private FontAwesome.Sharp.IconButton buttonBorrowing;

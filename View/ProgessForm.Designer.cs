@@ -32,6 +32,7 @@ namespace AdvancedProgrammingAssignment2.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProgessForm));
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -40,10 +41,12 @@ namespace AdvancedProgrammingAssignment2.View
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(207, 202);
+            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar1.Location = new System.Drawing.Point(130, 150);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(344, 47);
             this.progressBar1.TabIndex = 0;
+            this.progressBar1.UseWaitCursor = true;
             // 
             // timer1
             // 
@@ -51,32 +54,43 @@ namespace AdvancedProgrammingAssignment2.View
             // 
             // label1
             // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(245, 103);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(277, 37);
+            this.label1.Padding = new System.Windows.Forms.Padding(0, 50, 0, 0);
+            this.label1.Size = new System.Drawing.Size(600, 95);
             this.label1.TabIndex = 2;
             this.label1.Text = "Library Management System";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.UseWaitCursor = true;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(346, 176);
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Location = new System.Drawing.Point(0, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 23);
+            this.label2.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            this.label2.Size = new System.Drawing.Size(600, 54);
             this.label2.TabIndex = 3;
             this.label2.Text = "Loading...";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.UseWaitCursor = true;
             // 
             // ProgessForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 311);
+            this.ClientSize = new System.Drawing.Size(600, 300);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ProgessForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProgessForm";
+            this.UseWaitCursor = true;
             this.Load += new System.EventHandler(this.ProgessForm_Load);
             this.ResumeLayout(false);
         }

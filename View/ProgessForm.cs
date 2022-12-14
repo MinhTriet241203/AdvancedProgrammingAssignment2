@@ -18,10 +18,7 @@ namespace AdvancedProgrammingAssignment2.View
             progressBar1.Value = startpoint;
             if (progressBar1.Value == 100)
             {
-                progressBar1.Value = 0;
-                timer1.Stop();
-                Hide();
-
+                this.Hide();
                 LibraryApp log = new LibraryApp();
                 log.Show();
             }
