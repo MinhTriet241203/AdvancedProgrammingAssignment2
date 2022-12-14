@@ -2,8 +2,8 @@
 {
     public class Account
     {
-        private string _id;
         private string _email;
+        private string _id;
         private string _name;
         private string _password;
         protected string Class;
