@@ -2,10 +2,9 @@
 {
     public class User : Account
     {
-        public User(string id, string email, string fullName, string password) : base(id, email, fullName, password)
+        public User(string email, string fullName, string password) : base(email, fullName, password)
         {
-            Class = "User";
+            AccountClass = "User";
         }
-        
     }
 }

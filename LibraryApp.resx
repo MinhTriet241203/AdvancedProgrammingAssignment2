@@ -135,13 +135,16 @@
     <value>NoControl</value>
   </data>
   <data name="buttonBorrowing.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 440</value>
+    <value>0, 542</value>
+  </data>
+  <data name="buttonBorrowing.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="buttonBorrowing.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 0, 20, 0</value>
+    <value>13, 0, 27, 0</value>
   </data>
   <data name="buttonBorrowing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 60</value>
+    <value>293, 74</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="buttonBorrowing.TabIndex" type="System.Int32, mscorlib">
@@ -184,13 +187,16 @@
     <value>NoControl</value>
   </data>
   <data name="buttonAccounts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 380</value>
+    <value>0, 468</value>
+  </data>
+  <data name="buttonAccounts.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="buttonAccounts.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 0, 20, 0</value>
+    <value>13, 0, 27, 0</value>
   </data>
   <data name="buttonAccounts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 60</value>
+    <value>293, 74</value>
   </data>
   <data name="buttonAccounts.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -232,13 +238,16 @@
     <value>NoControl</value>
   </data>
   <data name="buttonAuthors.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 320</value>
+    <value>0, 394</value>
+  </data>
+  <data name="buttonAuthors.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="buttonAuthors.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 0, 20, 0</value>
+    <value>13, 0, 27, 0</value>
   </data>
   <data name="buttonAuthors.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 60</value>
+    <value>293, 74</value>
   </data>
   <data name="buttonAuthors.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -280,13 +289,16 @@
     <value>NoControl</value>
   </data>
   <data name="buttonBooks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 260</value>
+    <value>0, 320</value>
+  </data>
+  <data name="buttonBooks.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="buttonBooks.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 0, 20, 0</value>
+    <value>13, 0, 27, 0</value>
   </data>
   <data name="buttonBooks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 60</value>
+    <value>293, 74</value>
   </data>
   <data name="buttonBooks.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -328,13 +340,16 @@
     <value>NoControl</value>
   </data>
   <data name="buttonCategories.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 200</value>
+    <value>0, 246</value>
+  </data>
+  <data name="buttonCategories.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="buttonCategories.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 0, 20, 0</value>
+    <value>13, 0, 27, 0</value>
   </data>
   <data name="buttonCategories.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 60</value>
+    <value>293, 74</value>
   </data>
   <data name="buttonCategories.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -372,14 +387,20 @@
   <data name="buttonDashboard.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="buttonDashboard.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="buttonDashboard.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 140</value>
+    <value>0, 172</value>
+  </data>
+  <data name="buttonDashboard.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="buttonDashboard.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 0, 20, 0</value>
+    <value>13, 0, 27, 0</value>
   </data>
   <data name="buttonDashboard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 60</value>
+    <value>293, 74</value>
   </data>
   <data name="buttonDashboard.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -881,8 +902,11 @@
   <data name="panelLogo.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="panelLogo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="panelLogo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 140</value>
+    <value>293, 172</value>
   </data>
   <data name="panelLogo.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -905,8 +929,11 @@
   <data name="panelMenu.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="panelMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="panelMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 691</value>
+    <value>293, 850</value>
   </data>
   <data name="panelMenu.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -927,13 +954,10 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1274, 691</value>
+    <value>1699, 850</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2067,14 +2091,17 @@
         //////////////////////////////////8=
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 15</value>
+  </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Library Management System</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>LibraryApp</value>

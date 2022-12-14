@@ -1,10 +1,12 @@
-﻿namespace AdvancedProgrammingAssignment2
+﻿using MongoDB.Bson;
+
+namespace AdvancedProgrammingAssignment2
 {
     public class Admin : Account
     {
-        protected Admin(string id, string email, string fullName, string password) : base(id, email, fullName, password)
+        protected internal Admin(string email, string fullName, string password) : base(email, fullName, password)
         {
-            Class = "Admin";
+            AccountClass = "Admin";
         }
     }
 }

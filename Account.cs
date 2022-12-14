@@ -1,31 +1,34 @@
-﻿using MongoDB.Driver;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace AdvancedProgrammingAssignment2
 {
     public class Account
     {
-        private string _email;
-        private string _id;
-        private string _name;
-        private string _password;
-        protected string Class;
+        [BsonId] protected ObjectId Id { get; set; }
+        [BsonElement("email"), BsonRequired] private string Email { get; set; }
+        [BsonElement("name")] private string Name { get; set; }
+        [BsonElement("password")] private string Password { get; set; }
+        [BsonElement("class")] protected string AccountClass { get; set; }
 
-        protected Account(string id, string email, string fullName, string password, string @class)
+        protected Account(string email, string name, string password, string accountClass)
         {
-            _id = id;
-            _email = email;
-            _name = fullName;
-            _password = password;
-            Class = @class;
+            Email = email;
+            Name = name;
+            Password = password;
+            AccountClass = accountClass;
         }
 
-        protected Account(string id, string email, string name, string password)
+        protected Account(string email, string name, string password)
         {
-            _id = id;
-            _email = email;
-            _name = name;
-            _password = password;
+            Email = email;
+            Name = name;
+            Password = password;
         }
 
+        protected void UpdatePassword(string prePassword, string newPassword)
+        {
+            //todo: add update password here
+        }
     }
 }

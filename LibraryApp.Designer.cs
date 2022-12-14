@@ -31,12 +31,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibraryApp));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.buttonBorrowing = new FontAwesome.Sharp.IconButton();
-            this.buttonAccounts = new FontAwesome.Sharp.IconButton();
             this.buttonAuthors = new FontAwesome.Sharp.IconButton();
             this.buttonBooks = new FontAwesome.Sharp.IconButton();
             this.buttonCategories = new FontAwesome.Sharp.IconButton();
             this.buttonDashboard = new FontAwesome.Sharp.IconButton();
+            this.buttonAccounts = new FontAwesome.Sharp.IconButton();
+            this.buttonBorrowing = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -53,32 +53,6 @@
             this.panelMenu.Controls.Add(this.panelLogo);
             resources.ApplyResources(this.panelMenu, "panelMenu");
             this.panelMenu.Name = "panelMenu";
-            // 
-            // buttonBorrowing
-            // 
-            this.buttonBorrowing.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.buttonBorrowing, "buttonBorrowing");
-            this.buttonBorrowing.FlatAppearance.BorderSize = 0;
-            this.buttonBorrowing.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonBorrowing.IconChar = FontAwesome.Sharp.IconChar.Receipt;
-            this.buttonBorrowing.IconColor = System.Drawing.Color.Gainsboro;
-            this.buttonBorrowing.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonBorrowing.IconSize = 40;
-            this.buttonBorrowing.Name = "buttonBorrowing";
-            this.buttonBorrowing.UseVisualStyleBackColor = true;
-            // 
-            // buttonAccounts
-            // 
-            this.buttonAccounts.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.buttonAccounts, "buttonAccounts");
-            this.buttonAccounts.FlatAppearance.BorderSize = 0;
-            this.buttonAccounts.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonAccounts.IconChar = FontAwesome.Sharp.IconChar.CircleUser;
-            this.buttonAccounts.IconColor = System.Drawing.Color.Gainsboro;
-            this.buttonAccounts.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.buttonAccounts.IconSize = 40;
-            this.buttonAccounts.Name = "buttonAccounts";
-            this.buttonAccounts.UseVisualStyleBackColor = true;
             // 
             // buttonAuthors
             // 
@@ -132,16 +106,43 @@
             this.buttonDashboard.Name = "buttonDashboard";
             this.buttonDashboard.UseVisualStyleBackColor = true;
             // 
+            // buttonAccounts
+            // 
+            this.buttonAccounts.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.buttonAccounts, "buttonAccounts");
+            this.buttonAccounts.FlatAppearance.BorderSize = 0;
+            this.buttonAccounts.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonAccounts.IconChar = FontAwesome.Sharp.IconChar.CircleUser;
+            this.buttonAccounts.IconColor = System.Drawing.Color.Gainsboro;
+            this.buttonAccounts.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.buttonAccounts.IconSize = 40;
+            this.buttonAccounts.Name = "buttonAccounts";
+            this.buttonAccounts.UseVisualStyleBackColor = true;
+            // 
+            // buttonBorrowing
+            // 
+            this.buttonBorrowing.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.buttonBorrowing, "buttonBorrowing");
+            this.buttonBorrowing.FlatAppearance.BorderSize = 0;
+            this.buttonBorrowing.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonBorrowing.IconChar = FontAwesome.Sharp.IconChar.Receipt;
+            this.buttonBorrowing.IconColor = System.Drawing.Color.Gainsboro;
+            this.buttonBorrowing.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonBorrowing.IconSize = 40;
+            this.buttonBorrowing.Name = "buttonBorrowing";
+            this.buttonBorrowing.UseVisualStyleBackColor = true;
+            // 
             // panelLogo
             // 
             resources.ApplyResources(this.panelLogo, "panelLogo");
-            this.panelLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelLogo.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelLogo.Name = "panelLogo";
             // 
             // LibraryApp
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LibraryApp";
@@ -151,14 +152,13 @@
 
         private FontAwesome.Sharp.IconButton buttonAccounts;
         private FontAwesome.Sharp.IconButton buttonBorrowing;
+        private System.Windows.Forms.Panel panelLogo;
 
         private FontAwesome.Sharp.IconButton buttonCategories;
         private FontAwesome.Sharp.IconButton buttonBooks;
         private FontAwesome.Sharp.IconButton buttonAuthors;
 
         private FontAwesome.Sharp.IconButton buttonDashboard;
-
-        private System.Windows.Forms.Panel panelLogo;
 
         private System.Windows.Forms.Panel panelMenu;
 
