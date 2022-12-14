@@ -1,6 +1,6 @@
 ﻿namespace AdvancedProgrammingAssignment2
 {
-    partial class Form1
+    partial class LibraryApp
     {
         /// <summary>
         /// Required designer variable.
@@ -31,12 +31,12 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // LibraryApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form1";
+            this.Name = "LibraryApp";
             this.Text = "Form1";
             this.ResumeLayout(false);
         }
