@@ -2,7 +2,7 @@
 
 namespace AdvancedProgrammingAssignment2.View
 {
-    partial class ProgessForm
+    partial class ProgressForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace AdvancedProgrammingAssignment2.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProgessForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProgressForm));
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -77,7 +77,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.UseWaitCursor = true;
             // 
-            // ProgessForm
+            // ProgressForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -87,11 +87,11 @@ namespace AdvancedProgrammingAssignment2.View
             this.Controls.Add(this.progressBar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ProgessForm";
+            this.Name = "ProgressForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ProgessForm";
+            this.Text = "ProgressForm";
             this.UseWaitCursor = true;
-            this.Load += new System.EventHandler(this.ProgessForm_Load);
+            this.Load += new System.EventHandler(this.ProgressForm_Load);
             this.ResumeLayout(false);
         }
 
