@@ -92,7 +92,7 @@ namespace AdvancedProgrammingAssignment2.View
         {
             ActivateButton(sender, RgbColors.Color2);
         }
-        
+
         private void buttonBooks_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RgbColors.Color3);
