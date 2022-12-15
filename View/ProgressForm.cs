@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace AdvancedProgrammingAssignment2.View
 {
-    public partial class ProgessForm : Form     //typo here
+    public partial class ProgessForm : Form //typo here
     {
         private int startpoint;
 
@@ -18,8 +18,11 @@ namespace AdvancedProgrammingAssignment2.View
             progressBar1.Value = startpoint;
             if (progressBar1.Value == 100)
             {
-                this.Hide();
-                LibraryApp log = new LibraryApp();
+                timer1.Stop();
+                progressBar1.Value = 0;
+                Hide();
+                
+                var log = new LibraryApp();
                 log.Show();
             }
         }

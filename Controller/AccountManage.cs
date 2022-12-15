@@ -23,19 +23,19 @@ namespace AdvancedProgrammingAssignment2.Controller
         //The three methods below are for adding accounts, Admin, librarian, and user accounts.
         public static void AddAdmin(string email, string password, string name)
         {
-            Admin adminAccount = new Admin(email, name, password);
+            var adminAccount = new Admin(email, name, password);
             Collection.InsertOne(adminAccount);
         }
 
         public static void AddLibrarian(string email, string password, string name)
         {
-            Librarian librarianAccount = new Librarian(email, name, password);
+            var librarianAccount = new Librarian(email, name, password);
             Collection.InsertOne(librarianAccount);
         }
 
         public static void AddUser(string email, string password, string name)
         {
-            User userAccount = new User(email, name, password);
+            var userAccount = new User(email, name, password);
             Collection.InsertOne(userAccount);
         }
 
