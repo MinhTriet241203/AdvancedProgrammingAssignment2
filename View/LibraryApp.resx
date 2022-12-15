@@ -131,9 +131,6 @@
   <data name="buttonLibrarians.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="buttonLibrarians.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="buttonLibrarians.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 380</value>
   </data>
@@ -822,7 +819,7 @@
     <value>220, 140</value>
   </data>
   <data name="logo.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;logo.Name" xml:space="preserve">
     <value>logo</value>
@@ -903,13 +900,13 @@
     <value>220, 0</value>
   </data>
   <data name="iconButtonTitleBar.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 0, 20, 0</value>
+    <value>10, 0, 0, 0</value>
   </data>
   <data name="iconButtonTitleBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>1054, 70</value>
   </data>
   <data name="iconButtonTitleBar.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>0</value>
   </data>
   <data name="iconButtonTitleBar.Text" xml:space="preserve">
     <value>Home</value>
@@ -2081,6 +2078,9 @@
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Library Management System</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>LibraryApp</value>

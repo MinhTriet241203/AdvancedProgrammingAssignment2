@@ -113,6 +113,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.buttonCategories.IconSize = 40;
             this.buttonCategories.Name = "buttonCategories";
             this.buttonCategories.UseVisualStyleBackColor = false;
+            this.buttonCategories.Click += new System.EventHandler(this.buttonCategories_Click);
             // 
             // buttonDashboard
             // 
@@ -127,6 +128,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.buttonDashboard.IconSize = 40;
             this.buttonDashboard.Name = "buttonDashboard";
             this.buttonDashboard.UseVisualStyleBackColor = false;
+            this.buttonDashboard.Click += new System.EventHandler(this.buttonDashboard_Click);
             // 
             // panelLogo
             // 
@@ -145,13 +147,14 @@ namespace AdvancedProgrammingAssignment2.View
             // 
             // iconButtonTitleBar
             // 
-            this.iconButtonTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconButtonTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.iconButtonTitleBar.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.iconButtonTitleBar, "iconButtonTitleBar");
             this.iconButtonTitleBar.FlatAppearance.BorderSize = 0;
+            this.iconButtonTitleBar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.iconButtonTitleBar.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconButtonTitleBar.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconButtonTitleBar.IconColor = System.Drawing.Color.MediumPurple;
+            this.iconButtonTitleBar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
             this.iconButtonTitleBar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonTitleBar.IconSize = 50;
             this.iconButtonTitleBar.Name = "iconButtonTitleBar";
