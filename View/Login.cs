@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace AdvancedProgrammingAssignment2.View
 {
-    public partial class login : Form
+    public partial class Login : Form
     {
-        public login()
+        public Login()
         {
             InitializeComponent();
         }
