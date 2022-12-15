@@ -32,7 +32,7 @@ namespace AdvancedProgrammingAssignment2.View
 
                 LibraryApp log = new LibraryApp();
 
-                log.Show();
+                login.Show();
             }
         }
 
