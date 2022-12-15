@@ -35,30 +35,30 @@ namespace AdvancedProgrammingAssignment2.Controller
         //both the update and delete below needs to change the according books as well
         //thus the length of the methods themselves
 
-        public static bool DeleteCategory(ObjectId Id)
+        public static bool DeleteCategory(string Id)
         {
             //get the category name from the id, and then query the books table
             //to check if there is any books left
             //then allow for category deletion.
-            var filter = Builders<Category>.Filter.Eq("Id", Id);
+            var filter = Builders<Category>.Filter.Eq("_id", ObjectId.Parse(Id));
 
             //this returns the name of the first category id matching
             var category = CategoryCollection.Find(filter).First().CategoryName;
-            var count = Convert.ToInt32(BookCollection.CountDocumentsAsync(b => b.Category.Equals(category)));
+            var count = BookCollection.CountDocuments(b => b.Category.Equals(category));
 
             //check if there is any books left, false if not and delete then return true otherwise
             if (count != 0) return false;
-            CategoryCollection.DeleteOne(c => c.Id.Equals(Id));
+            CategoryCollection.DeleteOne(c => c.Id == ObjectId.Parse(Id));
             Console.WriteLine($"Deleted category \"{category}\" successfully!");
             return true;
 
             //todo: add some interaction here if return false, or do so in the view part
         }
 
-        public static void UpdateCategory(ObjectId Id, string categoryName)
+        public static void UpdateCategory(string Id, string categoryName)
         {
             //same as above, get category name and find all books matching
-            var idFilter = Builders<Category>.Filter.Eq("Id", Id);
+            var idFilter = Builders<Category>.Filter.Eq("_id", ObjectId.Parse(Id));
             var category = CategoryCollection.Find(idFilter).First().CategoryName;
 
             //definition to change towards
@@ -69,7 +69,7 @@ namespace AdvancedProgrammingAssignment2.Controller
 
             //then update the category name.
             var updateDefinition = Builders<Category>.Update.Set(c => c.CategoryName, categoryName);
-            CategoryCollection.UpdateOne(c => c.Id.Equals(Id), updateDefinition);
+            CategoryCollection.UpdateOne(c => c.Id == ObjectId.Parse(Id), updateDefinition);
         }
     }
 }

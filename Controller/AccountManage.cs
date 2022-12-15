@@ -21,38 +21,38 @@ namespace AdvancedProgrammingAssignment2.Controller
         private List<Account> _accountsList = new List<Account>();
 
         //The three methods below are for adding accounts, Admin, librarian, and user accounts.
-        public static void AddAdmin(string email, string password, string name)
+        public static void AddAdmin(string email, string name, string password)
         {
             var adminAccount = new Admin(email, name, password);
             Collection.InsertOne(adminAccount);
         }
 
-        public static void AddLibrarian(string email, string password, string name)
+        public static void AddLibrarian(string email, string name, string password)
         {
             var librarianAccount = new Librarian(email, name, password);
             Collection.InsertOne(librarianAccount);
         }
 
-        public static void AddUser(string email, string password, string name)
+        public static void AddUser(string email, string name, string password)
         {
             var userAccount = new User(email, name, password);
             Collection.InsertOne(userAccount);
         }
 
         //this part delete accounts from db by matching [Id] to received [id]
-        public static void RemoveAccount(ObjectId id)
-        {
-            Collection.DeleteOne(a => a.Id == id);
+        public static void RemoveAccount(string id)
+        {   
+            Collection.DeleteOne(a => a.Id == ObjectId.Parse(id));
         }
 
         //this part updates the accounts with new information regarding the password and name.
         //it then updates the account with matching [Id] with the new information.
-        public static void UpdateAccount(ObjectId id, string password, string name)
+        public static void UpdateAccount(string id, string password, string name)
         {
             var updateDefinition = Builders<Account>.Update
                 .Set(a => a.Password, password)
                 .Set(a => a.Name, name);
-            Collection.UpdateOne(a => a.Id.Equals(id), updateDefinition);
+            Collection.UpdateOne(a => a.Id == ObjectId.Parse(id), updateDefinition);
         }
     }
 }
