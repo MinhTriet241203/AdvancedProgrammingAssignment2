@@ -7,9 +7,8 @@ namespace AdvancedProgrammingAssignment2.View
 {
     public partial class LibraryApp : Form
     {
-        private readonly Panel _leftBorderButton;
-
         //Fields
+        private readonly Panel _leftBorderButton;
         private IconButton _currentButton;
         private Form _currentChildForm;
 
@@ -18,7 +17,7 @@ namespace AdvancedProgrammingAssignment2.View
         {
             InitializeComponent();
             _leftBorderButton = new Panel();
-            _leftBorderButton.Size = new Size(7, 60);
+            _leftBorderButton.Size = new Size(7, 70);
             panelMenu.Controls.Add(_leftBorderButton);
         }
 
@@ -95,6 +94,7 @@ namespace AdvancedProgrammingAssignment2.View
         private void buttonCategories_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RgbColors.Color2);
+            OpenChildForm(new CategoryForm());
         }
 
         private void buttonBooks_Click(object sender, EventArgs e)

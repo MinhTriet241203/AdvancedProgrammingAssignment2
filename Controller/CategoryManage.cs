@@ -16,7 +16,7 @@ namespace AdvancedProgrammingAssignment2.Controller
         private static readonly IMongoDatabase Database = Client.GetDatabase("LibrarySystem");
 
         //reaching into the category and book table, these are the collections that is retrieved from the database
-        private static readonly IMongoCollection<Category> CategoryCollection =
+        public static readonly IMongoCollection<Category> CategoryCollection =
             Database.GetCollection<Category>("Categories");
 
         private static readonly IMongoCollection<Book> BookCollection = Database.GetCollection<Book>("Books");

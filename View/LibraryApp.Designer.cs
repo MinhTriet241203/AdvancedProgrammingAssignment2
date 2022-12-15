@@ -178,6 +178,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LibraryApp";
+            this.Closed += new System.EventHandler(this.Form_Close);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.ResumeLayout(false);
