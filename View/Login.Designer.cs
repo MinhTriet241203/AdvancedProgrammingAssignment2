@@ -45,9 +45,10 @@ namespace AdvancedProgrammingAssignment2.View
             // 
             // UserName
             // 
-            this.UserName.Location = new System.Drawing.Point(152, 102);
+            this.UserName.Location = new System.Drawing.Point(101, 161);
+            this.UserName.Margin = new System.Windows.Forms.Padding(4);
             this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(130, 20);
+            this.UserName.Size = new System.Drawing.Size(234, 22);
             this.UserName.TabIndex = 0;
             // 
             // panel1
@@ -56,52 +57,61 @@ namespace AdvancedProgrammingAssignment2.View
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(352, 0);
+            this.panel1.Location = new System.Drawing.Point(469, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(344, 339);
+            this.panel1.Size = new System.Drawing.Size(459, 417);
             this.panel1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(65, 58);
+            this.label1.Location = new System.Drawing.Point(87, 71);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 41);
+            this.label1.Size = new System.Drawing.Size(275, 50);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Login Account";
+            this.label1.Text = "Login";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(76, 105);
+            this.label2.Location = new System.Drawing.Point(101, 129);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 23);
+            this.label2.Size = new System.Drawing.Size(93, 28);
             this.label2.TabIndex = 3;
-            this.label2.Text = "User Name";
+            this.label2.Text = "Username";
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(76, 141);
+            this.label3.Location = new System.Drawing.Point(101, 213);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 23);
+            this.label3.Size = new System.Drawing.Size(76, 28);
             this.label3.TabIndex = 4;
             this.label3.Text = "Password";
             // 
             // Password
             // 
-            this.Password.Location = new System.Drawing.Point(152, 138);
+            this.Password.Location = new System.Drawing.Point(101, 245);
+            this.Password.Margin = new System.Windows.Forms.Padding(4);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(130, 20);
+            this.Password.PasswordChar = '*';
+            this.Password.Size = new System.Drawing.Size(234, 22);
             this.Password.TabIndex = 5;
+            this.Password.UseSystemPasswordChar = true;
+            this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
             // 
             // LoginAccount
             // 
             this.LoginAccount.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.LoginAccount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LoginAccount.Location = new System.Drawing.Point(76, 191);
+            this.LoginAccount.Location = new System.Drawing.Point(87, 309);
+            this.LoginAccount.Margin = new System.Windows.Forms.Padding(4);
             this.LoginAccount.Name = "LoginAccount";
-            this.LoginAccount.Size = new System.Drawing.Size(79, 24);
+            this.LoginAccount.Size = new System.Drawing.Size(105, 30);
             this.LoginAccount.TabIndex = 6;
             this.LoginAccount.Text = "Login";
             this.LoginAccount.UseVisualStyleBackColor = false;
@@ -111,9 +121,10 @@ namespace AdvancedProgrammingAssignment2.View
             // 
             this.RegisterAccount.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.RegisterAccount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegisterAccount.Location = new System.Drawing.Point(203, 190);
+            this.RegisterAccount.Location = new System.Drawing.Point(257, 308);
+            this.RegisterAccount.Margin = new System.Windows.Forms.Padding(4);
             this.RegisterAccount.Name = "RegisterAccount";
-            this.RegisterAccount.Size = new System.Drawing.Size(79, 25);
+            this.RegisterAccount.Size = new System.Drawing.Size(105, 31);
             this.RegisterAccount.TabIndex = 7;
             this.RegisterAccount.Text = "Register";
             this.RegisterAccount.UseVisualStyleBackColor = false;
@@ -123,17 +134,19 @@ namespace AdvancedProgrammingAssignment2.View
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label4.Location = new System.Drawing.Point(30, 9);
+            this.label4.Location = new System.Drawing.Point(40, 11);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(287, 35);
+            this.label4.Size = new System.Drawing.Size(383, 43);
             this.label4.TabIndex = 0;
             this.label4.Text = "Library Management\r\n";
             // 
             // login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 339);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(928, 417);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.RegisterAccount);
             this.Controls.Add(this.LoginAccount);
@@ -143,9 +156,10 @@ namespace AdvancedProgrammingAssignment2.View
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.UserName);
+            this.Location = new System.Drawing.Point(15, 15);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "login Account";
             this.ResumeLayout(false);
             this.PerformLayout();
         }
