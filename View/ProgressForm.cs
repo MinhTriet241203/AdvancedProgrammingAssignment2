@@ -5,7 +5,7 @@ namespace AdvancedProgrammingAssignment2.View
 {
     public partial class ProgressForm : Form //typo here
     {
-        private int _startpoint;
+        private int startpoint;
 
         public ProgressForm()
         {
@@ -14,8 +14,8 @@ namespace AdvancedProgrammingAssignment2.View
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            _startpoint += 5;
-            progressBar1.Value = _startpoint;
+            startpoint += 5;
+            progressBar1.Value = startpoint;
             if (progressBar1.Value == 100)
             {
                 timer1.Stop();
@@ -23,16 +23,16 @@ namespace AdvancedProgrammingAssignment2.View
                 Hide();
 
                 //todo: add a login form intercepting this process
-                
+
                 //Create new LibraryApp.css file to run window
 
                 Login login = new Login();
-                
+
                 //Run LibraryApp.cs to open new window
 
                 LibraryApp log = new LibraryApp();
 
-                log.Show();
+                login.Show();
             }
         }
 
