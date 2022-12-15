@@ -8,6 +8,5 @@ namespace AdvancedProgrammingAssignment2.View
         {
             InitializeComponent();
         }
-
     }
 }

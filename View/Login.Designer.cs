@@ -32,7 +32,7 @@ namespace AdvancedProgrammingAssignment2.View
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.UserName = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,13 +43,13 @@ namespace AdvancedProgrammingAssignment2.View
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // UserName
+            // Email
             // 
-            this.UserName.Location = new System.Drawing.Point(101, 161);
-            this.UserName.Margin = new System.Windows.Forms.Padding(4);
-            this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(234, 22);
-            this.UserName.TabIndex = 0;
+            this.Email.Location = new System.Drawing.Point(101, 187);
+            this.Email.Margin = new System.Windows.Forms.Padding(4);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(234, 22);
+            this.Email.TabIndex = 0;
             // 
             // panel1
             // 
@@ -66,23 +66,23 @@ namespace AdvancedProgrammingAssignment2.View
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(87, 71);
+            this.label1.Location = new System.Drawing.Point(101, 96);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(275, 50);
+            this.label1.Size = new System.Drawing.Size(234, 50);
             this.label1.TabIndex = 2;
             this.label1.Text = "Login";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(101, 129);
+            this.label2.Location = new System.Drawing.Point(101, 155);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 28);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Username";
+            this.label2.Text = "Email";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
@@ -92,6 +92,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.label3.Size = new System.Drawing.Size(76, 28);
             this.label3.TabIndex = 4;
             this.label3.Text = "Password";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Password
             // 
@@ -101,14 +102,13 @@ namespace AdvancedProgrammingAssignment2.View
             this.Password.PasswordChar = '*';
             this.Password.Size = new System.Drawing.Size(234, 22);
             this.Password.TabIndex = 5;
-            this.Password.UseSystemPasswordChar = true;
-            this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
+            this.Password.UseSystemPasswordChar = true; 
             // 
             // LoginAccount
             // 
             this.LoginAccount.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.LoginAccount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LoginAccount.Location = new System.Drawing.Point(87, 309);
+            this.LoginAccount.Location = new System.Drawing.Point(101, 309);
             this.LoginAccount.Margin = new System.Windows.Forms.Padding(4);
             this.LoginAccount.Name = "LoginAccount";
             this.LoginAccount.Size = new System.Drawing.Size(105, 30);
@@ -121,7 +121,7 @@ namespace AdvancedProgrammingAssignment2.View
             // 
             this.RegisterAccount.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.RegisterAccount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegisterAccount.Location = new System.Drawing.Point(257, 308);
+            this.RegisterAccount.Location = new System.Drawing.Point(230, 309);
             this.RegisterAccount.Margin = new System.Windows.Forms.Padding(4);
             this.RegisterAccount.Name = "RegisterAccount";
             this.RegisterAccount.Size = new System.Drawing.Size(105, 31);
@@ -140,8 +140,9 @@ namespace AdvancedProgrammingAssignment2.View
             this.label4.Size = new System.Drawing.Size(383, 43);
             this.label4.TabIndex = 0;
             this.label4.Text = "Library Management\r\n";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // login
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -155,7 +156,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.UserName);
+            this.Controls.Add(this.Email);
             this.Location = new System.Drawing.Point(15, 15);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
@@ -180,7 +181,7 @@ namespace AdvancedProgrammingAssignment2.View
 
         private System.Windows.Forms.Panel panel1;
 
-        private System.Windows.Forms.TextBox UserName;
+        private System.Windows.Forms.TextBox Email;
 
         #endregion
     }

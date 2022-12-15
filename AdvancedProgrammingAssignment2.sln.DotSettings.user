@@ -3,7 +3,8 @@
 	
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8618fb8b_002Dfd84_002D4aa6_002Db579_002Db201bfe8a560/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestAdmin" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::4FABE6D8-6D76-47D4-8D6E-986B10A4CA08::.NETFramework,Version=v4.8.1::Testing.Tests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::01284132-A854-48CC-979F-FFBBE6521F08::.NETFramework,Version=v4.8.1::Testing2.Tests.GetAllAccountsTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::01284132-A854-48CC-979F-FFBBE6521F08::.NETFramework,Version=v4.8.1::Testing2.Tests.TestAddCategory&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	

@@ -87,12 +87,13 @@ namespace AdvancedProgrammingAssignment2.Controller
                 Account account = Collection.Find(filter).First();
                 var email = account.Email.ToLower();
                 var password = account.Password;
+                string accountClass = account.AccountClass;
 
-                if (email.Equals(inputEmail) && password.Equals(inputPassword)) return "success";
+                if (email.Equals(inputEmail) && password.Equals(inputPassword)) return accountClass;
 
                 return "Email or password is incorrect";
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return "Email not found";
             }
