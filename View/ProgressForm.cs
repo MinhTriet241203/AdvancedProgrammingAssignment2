@@ -23,16 +23,16 @@ namespace AdvancedProgrammingAssignment2.View
                 timer1.Stop();
                 progressBar1.Value = 0;
                 Hide();
-<<<<<<< HEAD:ProgessForm.cs
+
 
                 //Create new LibraryApp.css file to run window
                 LibraryApp log = new LibraryApp();
                 
                 //Run LibraryApp.cs to open new window
-=======
+
                 
                 var log = new LibraryApp();
->>>>>>> 6a57a2651f5738f198fbca60b63f0e0ba75b5062:View/ProgressForm.cs
+
                 log.Show();
             }
         }
