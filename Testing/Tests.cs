@@ -1,12 +1,19 @@
-using System;
 using AdvancedProgrammingAssignment2.Controller;
+using AdvancedProgrammingAssignment2.Model;
 using MongoDB.Bson;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace Testing
 {
     public class Tests
     {
+        private readonly ITestOutputHelper _testOutputHelper;
+
+        public Tests(ITestOutputHelper testOutputHelper)
+        {
+            _testOutputHelper = testOutputHelper;
+        }
 
         [Fact]
         public void TestAddCategory()
@@ -51,10 +58,25 @@ namespace Testing
         [Fact]
         public void TestDelAccount()
         {
-            //remember to change this ObjectId before testing
-            var x = "639aca59482cd43757be2343";
+            User test = new User("testDeleteAccount@mail.com", "user", "123");
+            var x = "testDeleteAccount@@mail.com";
             AccountManage.RemoveAccount(x);
         }
-        
+
+        [Fact]
+        public void GetAllAccountsTest()
+        {
+            var accounts = AccountManage.GetAllAccounts();
+            foreach (Account account in accounts) _testOutputHelper.WriteLine(account.ToJson());
+        }
+
+        [Fact]
+        public void LoginTest()
+        {
+            var email = "user@mail.com";
+            var password = "123";
+            Assert.True(AccountManage.Login(email, password).Equals("success"));
+            _testOutputHelper.WriteLine(AccountManage.Login(email, password));
+        }
     }
 }
