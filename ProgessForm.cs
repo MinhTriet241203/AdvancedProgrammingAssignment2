@@ -10,6 +10,8 @@ namespace AdvancedProgrammingAssignment2
         public ProgessForm()
         {
             InitializeComponent();
+           
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -22,7 +24,10 @@ namespace AdvancedProgrammingAssignment2
                 timer1.Stop();
                 Hide();
 
+                //Create new LibraryApp.css file to run window
                 LibraryApp log = new LibraryApp();
+                
+                //Run LibraryApp.cs to open new window
                 log.Show();
             }
         }
