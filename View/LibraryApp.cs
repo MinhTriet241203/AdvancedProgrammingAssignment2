@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace AdvancedProgrammingAssignment2.View
@@ -7,7 +8,7 @@ namespace AdvancedProgrammingAssignment2.View
     {
         private string _activeTab;
         private string _previousTab;
-
+        
         public LibraryApp()
         {
             InitializeComponent();

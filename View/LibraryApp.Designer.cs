@@ -122,7 +122,6 @@
             this.buttonCategories.IconSize = 40;
             this.buttonCategories.Name = "buttonCategories";
             this.buttonCategories.UseVisualStyleBackColor = false;
-            this.buttonCategories.Click += new System.EventHandler(this.buttonCategories_Click);
             // 
             // buttonDashboard
             // 
@@ -137,7 +136,6 @@
             this.buttonDashboard.IconSize = 40;
             this.buttonDashboard.Name = "buttonDashboard";
             this.buttonDashboard.UseVisualStyleBackColor = false;
-            this.buttonDashboard.Click += new System.EventHandler(this.buttonDashboard_Click);
             // 
             // panelLogo
             // 
