@@ -26,13 +26,9 @@ namespace AdvancedProgrammingAssignment2.View
 
 
                 //Create new LibraryApp.css file to run window
-                LibraryApp log = new LibraryApp();
+                login log = new login();
                 
                 //Run LibraryApp.cs to open new window
-
-                
-                var log = new LibraryApp();
-
                 log.Show();
             }
         }

@@ -2,7 +2,9 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=E2DB31C6_002D4421_002D4D65_002D9FE5_002D4A43072A5F87_002Ff_003ALibraryApp_002Eresx/@EntryIndexedValue">ExplicitlyExcluded</s:String>
 	
 	
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FLibraryApp/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FLibraryApp/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002Flogin/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FLogin/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FProgessForm/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FProgressForm/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FProgressForm/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean></wpf:ResourceDictionary>
