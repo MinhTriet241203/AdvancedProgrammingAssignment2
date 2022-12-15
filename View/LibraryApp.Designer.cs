@@ -1,4 +1,6 @@
-﻿namespace AdvancedProgrammingAssignment2.View
+﻿using System;
+
+namespace AdvancedProgrammingAssignment2.View
 {
     partial class LibraryApp
     {
