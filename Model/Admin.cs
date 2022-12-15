@@ -1,6 +1,4 @@
-﻿using MongoDB.Bson;
-
-namespace AdvancedProgrammingAssignment2
+﻿namespace AdvancedProgrammingAssignment2.Model
 {
     public class Admin : Account
     {
