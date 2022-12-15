@@ -33,8 +33,6 @@ namespace AdvancedProgrammingAssignment2.View
         {
             this.labelTitle = new System.Windows.Forms.Label();
             this.separator = new System.Windows.Forms.Label();
-            this.dataGridViewCategory = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategory)).BeginInit();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -59,32 +57,18 @@ namespace AdvancedProgrammingAssignment2.View
             this.separator.Size = new System.Drawing.Size(1100, 2);
             this.separator.TabIndex = 1;
             // 
-            // dataGridViewCategory
-            // 
-            this.dataGridViewCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCategory.Location = new System.Drawing.Point(12, 73);
-            this.dataGridViewCategory.Margin = new System.Windows.Forms.Padding(0);
-            this.dataGridViewCategory.Name = "dataGridViewCategory";
-            this.dataGridViewCategory.Size = new System.Drawing.Size(550, 550);
-            this.dataGridViewCategory.TabIndex = 2;
-            this.dataGridViewCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCategory_CellContentClick);
-            // 
             // CategoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1124, 630);
-            this.Controls.Add(this.dataGridViewCategory);
             this.Controls.Add(this.separator);
             this.Controls.Add(this.labelTitle);
             this.Name = "CategoryForm";
             this.Text = "CategoryForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategory)).EndInit();
             this.ResumeLayout(false);
         }
-
-        private System.Windows.Forms.DataGridView dataGridViewCategory;
 
         private System.Windows.Forms.Label separator;
 

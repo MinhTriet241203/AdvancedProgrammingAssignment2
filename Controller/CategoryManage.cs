@@ -26,7 +26,7 @@ namespace AdvancedProgrammingAssignment2.Controller
         //use the category constructor then insert the newly created category into the collection
         public static void AddCategory(string categoryName)
         {
-            Category newCategory = new Category(categoryName);
+            var newCategory = new Category(categoryName);
             CategoryCollection.InsertOne(newCategory);
         }
 

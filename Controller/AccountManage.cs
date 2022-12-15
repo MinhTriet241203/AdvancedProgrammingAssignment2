@@ -37,19 +37,19 @@ namespace AdvancedProgrammingAssignment2.Controller
         //The three methods below are for adding accounts, Admin, librarian, and user accounts.
         public static void AddAdmin(string email, string name, string password)
         {
-            Admin adminAccount = new Admin(email.ToLower(), name, password);
+            var adminAccount = new Admin(email.ToLower(), name, password);
             Collection.InsertOne(adminAccount);
         }
 
         public static void AddLibrarian(string email, string name, string password)
         {
-            Librarian librarianAccount = new Librarian(email.ToLower(), name, password);
+            var librarianAccount = new Librarian(email.ToLower(), name, password);
             Collection.InsertOne(librarianAccount);
         }
 
         public static void AddUser(string email, string name, string password)
         {
-            User userAccount = new User(email.ToLower(), name, password);
+            var userAccount = new User(email.ToLower(), name, password);
             Collection.InsertOne(userAccount);
         }
 
@@ -84,10 +84,10 @@ namespace AdvancedProgrammingAssignment2.Controller
 
             try
             {
-                Account account = Collection.Find(filter).First();
+                var account = Collection.Find(filter).First();
                 var email = account.Email.ToLower();
                 var password = account.Password;
-                string accountClass = account.AccountClass;
+                var accountClass = account.AccountClass;
 
                 if (email.Equals(inputEmail) && password.Equals(inputPassword)) return accountClass;
 

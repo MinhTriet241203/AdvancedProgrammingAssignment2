@@ -15,7 +15,6 @@ namespace AdvancedProgrammingAssignment2.Model
         public static LoggedInClass GetInstance(string value)
         {
             if (_accountClass == null)
-            {
                 lock (_lock)
                 {
                     if (_accountClass == null)
@@ -24,7 +23,6 @@ namespace AdvancedProgrammingAssignment2.Model
                         _accountClass.Value = value;
                     }
                 }
-            }
 
             return _accountClass;
         }

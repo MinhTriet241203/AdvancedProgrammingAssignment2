@@ -14,6 +14,6 @@ namespace AdvancedProgrammingAssignment2.Model
 
         [BsonElement("categoryName")]
         [BsonRequired]
-        internal string CategoryName { get; set; }
+        public string CategoryName { get; set; }
     }
 }

@@ -21,7 +21,7 @@ namespace AdvancedProgrammingAssignment2.View
                     loginStatus == "User" ||
                     loginStatus == "Librarian")
                 {
-                    LoggedInClass aLoggedInClass = LoggedInClass.GetInstance(loginStatus);
+                    var aLoggedInClass = LoggedInClass.GetInstance(loginStatus);
                     //transition to the dashboard
                 }
             }
