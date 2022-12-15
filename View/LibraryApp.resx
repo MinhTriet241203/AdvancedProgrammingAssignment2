@@ -879,7 +879,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panelMenu.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="iconButtonTitleBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -927,6 +927,30 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;iconButtonTitleBar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelHub.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="panelHub.Location" type="System.Drawing.Point, System.Drawing">
+    <value>220, 70</value>
+  </data>
+  <data name="panelHub.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1054, 621</value>
+  </data>
+  <data name="panelHub.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panelHub.Name" xml:space="preserve">
+    <value>panelHub</value>
+  </data>
+  <data name="&gt;&gt;panelHub.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelHub.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelHub.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

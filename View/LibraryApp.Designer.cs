@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace AdvancedProgrammingAssignment2.View
 {
@@ -41,6 +42,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.panelLogo = new System.Windows.Forms.Panel();
             this.logo = new System.Windows.Forms.Panel();
             this.iconButtonTitleBar = new FontAwesome.Sharp.IconButton();
+            this.panelHub = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.SuspendLayout();
@@ -147,11 +149,11 @@ namespace AdvancedProgrammingAssignment2.View
             // 
             // iconButtonTitleBar
             // 
-            this.iconButtonTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
+            this.iconButtonTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.iconButtonTitleBar.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.iconButtonTitleBar, "iconButtonTitleBar");
             this.iconButtonTitleBar.FlatAppearance.BorderSize = 0;
-            this.iconButtonTitleBar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
+            this.iconButtonTitleBar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.iconButtonTitleBar.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconButtonTitleBar.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconButtonTitleBar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
@@ -160,11 +162,18 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonTitleBar.Name = "iconButtonTitleBar";
             this.iconButtonTitleBar.UseVisualStyleBackColor = false;
             // 
+            // panelHub
+            // 
+            resources.ApplyResources(this.panelHub, "panelHub");
+            this.panelHub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelHub.Name = "panelHub";
+            // 
             // LibraryApp
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
+            this.Controls.Add(this.panelHub);
             this.Controls.Add(this.iconButtonTitleBar);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -173,6 +182,8 @@ namespace AdvancedProgrammingAssignment2.View
             this.panelLogo.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Panel panelHub;
 
         private FontAwesome.Sharp.IconButton iconButtonTitleBar;
 

@@ -10,6 +10,7 @@ namespace AdvancedProgrammingAssignment2.View
         //Fields
         private IconButton _currentButton;
         private readonly Panel _leftBorderButton;
+        private Form _currentChildForm;
 
         //Constructor
         public LibraryApp()
@@ -82,6 +83,20 @@ namespace AdvancedProgrammingAssignment2.View
             iconButtonTitleBar.Text = @"Home";
         }
 
+        private void OpenChildForm(Form childForm)
+        {
+            _currentChildForm?.Close();
+            _currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelHub.Controls.Add(childForm);
+            panelHub.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            
+        }
+
         //Button events
         private void buttonDashboard_Click(object sender, EventArgs e)
         {
@@ -111,6 +126,11 @@ namespace AdvancedProgrammingAssignment2.View
         private void logo_Click(object sender, EventArgs e)
         {
             Reset();
+        }
+
+        private void Form_Close(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
