@@ -32,6 +32,7 @@ namespace AdvancedProgrammingAssignment2.View
         private void InitializeComponent()
         {
             this.labelTitle = new System.Windows.Forms.Label();
+            this.separator = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -45,6 +46,17 @@ namespace AdvancedProgrammingAssignment2.View
             this.labelTitle.Size = new System.Drawing.Size(1038, 78);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Category Management";
+            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // separator
+            // 
+            this.separator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.separator.Dock = System.Windows.Forms.DockStyle.Top;
+            this.separator.Location = new System.Drawing.Point(0, 78);
+            this.separator.Name = "separator";
+            this.separator.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.separator.Size = new System.Drawing.Size(1038, 2);
+            this.separator.TabIndex = 1;
             // 
             // CategoryForm
             // 
@@ -52,11 +64,15 @@ namespace AdvancedProgrammingAssignment2.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1038, 582);
+            this.Controls.Add(this.separator);
             this.Controls.Add(this.labelTitle);
             this.Name = "CategoryForm";
             this.Text = "CategoryForm";
+            this.Load += new System.EventHandler(this.CategoryForm_Load);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label separator;
 
         private System.Windows.Forms.Label labelTitle;
 
