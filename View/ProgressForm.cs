@@ -10,6 +10,8 @@ namespace AdvancedProgrammingAssignment2.View
         public ProgessForm()
         {
             InitializeComponent();
+           
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -21,8 +23,16 @@ namespace AdvancedProgrammingAssignment2.View
                 timer1.Stop();
                 progressBar1.Value = 0;
                 Hide();
+
+
+                //Create new LibraryApp.css file to run window
+                LibraryApp log = new LibraryApp();
+                
+                //Run LibraryApp.cs to open new window
+
                 
                 var log = new LibraryApp();
+
                 log.Show();
             }
         }
