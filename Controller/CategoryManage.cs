@@ -35,12 +35,12 @@ namespace AdvancedProgrammingAssignment2.Controller
         //both the update and delete below needs to change the according books as well
         //thus the length of the methods themselves
 
-        public static bool DeleteCategory(string Id)
+        public static bool DeleteCategory(string id)
         {
             //get the category name from the id, and then query the books table
             //to check if there is any books left
             //then allow for category deletion.
-            var filter = Builders<Category>.Filter.Eq("_id", ObjectId.Parse(Id));
+            var filter = Builders<Category>.Filter.Eq("_id", ObjectId.Parse(id));
 
             //this returns the name of the first category id matching
             var category = CategoryCollection.Find(filter).First().CategoryName;
@@ -48,17 +48,17 @@ namespace AdvancedProgrammingAssignment2.Controller
 
             //check if there is any books left, false if not and delete then return true otherwise
             if (count != 0) return false;
-            CategoryCollection.DeleteOne(c => c.Id == ObjectId.Parse(Id));
+            CategoryCollection.DeleteOne(c => c.Id == ObjectId.Parse(id));
             Console.WriteLine($"Deleted category \"{category}\" successfully!");
             return true;
 
             //todo: add some interaction here if return false, or do so in the view part
         }
 
-        public static void UpdateCategory(string Id, string categoryName)
+        public static void UpdateCategory(string id, string categoryName)
         {
             //same as above, get category name and find all books matching
-            var idFilter = Builders<Category>.Filter.Eq("_id", ObjectId.Parse(Id));
+            var idFilter = Builders<Category>.Filter.Eq("_id", ObjectId.Parse(id));
             var category = CategoryCollection.Find(idFilter).First().CategoryName;
 
             //definition to change towards
@@ -69,7 +69,7 @@ namespace AdvancedProgrammingAssignment2.Controller
 
             //then update the category name.
             var updateDefinition = Builders<Category>.Update.Set(c => c.CategoryName, categoryName);
-            CategoryCollection.UpdateOne(c => c.Id == ObjectId.Parse(Id), updateDefinition);
+            CategoryCollection.UpdateOne(c => c.Id == ObjectId.Parse(id), updateDefinition);
         }
     }
 }

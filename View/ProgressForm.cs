@@ -5,7 +5,7 @@ namespace AdvancedProgrammingAssignment2.View
 {
     public partial class ProgressForm : Form //typo here
     {
-        private int startpoint;
+        private int _startpoint;
 
         public ProgressForm()
         {
@@ -14,8 +14,8 @@ namespace AdvancedProgrammingAssignment2.View
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            startpoint += 5;
-            progressBar1.Value = startpoint;
+            _startpoint += 5;
+            progressBar1.Value = _startpoint;
             if (progressBar1.Value == 100)
             {
                 timer1.Stop();
