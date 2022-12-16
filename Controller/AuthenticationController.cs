@@ -30,17 +30,16 @@ namespace AdvancedProgrammingAssignment2.Controller
             var filter = Builders<Account>.Filter.Eq("Email", inputEmail.ToLower());
             if (AvailableAccountsCheck(inputEmail)
                 .Equals("invalid")) return "invalid email"; //can set error and stuffs here.
-
             try
             {
                 Account account = Collection.Find(filter).First();
                 var email = account.Email.ToLower();
                 var password = account.Password;
-                string accountClass = account.AccountClass;
+                var accountClass = account.AccountClass;
 
-                if (email.Equals(inputEmail) && password.Equals(inputPassword)) return accountClass;
-
-                return "Email or password is incorrect";
+                //lookup the database password
+                if (password.Equals(inputPassword)) return accountClass;
+                return "Incorrect password for email!";
             }
             catch (Exception)
             {

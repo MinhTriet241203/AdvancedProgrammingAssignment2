@@ -311,9 +311,11 @@
         <Compile Include="Controller\AccountManage.cs" />
         <Compile Include="Controller\AuthenticationController.cs" />
         <Compile Include="Controller\BookManage.cs" />
+        <Compile Include="Controller\BorrowManage.cs" />
         <Compile Include="Controller\CategoryManage.cs" />
         <Compile Include="Model\Account.cs" />
         <Compile Include="Model\Admin.cs" />
+        <Compile Include="Model\Borrow.cs" />
         <Compile Include="Model\LoggedInClass.cs" />
         <Compile Include="Model\Book.cs" />
         <Compile Include="Model\Category.cs" />

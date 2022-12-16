@@ -27,6 +27,12 @@ namespace AdvancedProgrammingAssignment2.Controller
             return list;
         }
 
+        public List<Account> SearchAccount(string searchKeyword)
+        {
+            var accountList = Collection.Find(a => a.Email.Contains(searchKeyword) || a.Name.Contains(searchKeyword)).ToList();
+            return accountList;
+        }
+
         //The three methods below are for adding accounts, Admin, librarian, and user accounts.
         public static void AddAdmin(string email, string name, string password)
         {

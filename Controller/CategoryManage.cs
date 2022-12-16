@@ -55,11 +55,11 @@ namespace AdvancedProgrammingAssignment2.Controller
         }
 
         //here is the search method, in implementation there should be a check for null result
-        public static Category SearchCategory(string categoryName)
+        public static List<Category> SearchCategory(string categoryName)
         {
             if (CategoryExists(categoryName))
             {
-                Category searchedCategory = CategoryCollection.Find(c => c.CategoryName == categoryName).First();
+                var searchedCategory = CategoryCollection.Find(c => c.CategoryName.Contains(categoryName)).ToList();
                 return searchedCategory;
             }
             return null;

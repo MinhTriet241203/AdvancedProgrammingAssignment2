@@ -1,5 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.DirectoryServices.ActiveDirectory;
+using System.Runtime.CompilerServices;
+using System.Windows;
 using System.Windows.Markup;
 using AdvancedProgrammingAssignment2.Model;
 using MongoDB.Bson;
@@ -21,12 +24,19 @@ namespace AdvancedProgrammingAssignment2.Controller
             Database.GetCollection<Category>("Categories");
 
         private static readonly IMongoCollection<Book> BookCollection = Database.GetCollection<Book>("Books");
-        
+
         public static List<Book> GetBooks()
         {
             var books = BookCollection.AsQueryable().ToList();
             return books;
             //then over on the view side we can check the length of the books list 
+        }
+
+        public static List<Book> SearchBook(string keyword)
+        {
+            //return the list of books that matches the search keyword
+            var searchedBooks = BookCollection.Find(a => a.BookName.Contains(keyword)).ToList();
+            return searchedBooks;
         }
 
         public static string AddBook(string isbn, string bookName, string category, string author, string image)
@@ -35,22 +45,47 @@ namespace AdvancedProgrammingAssignment2.Controller
             if (CategoryCollection.Find(filter).CountDocuments() != 0)
             {
                 Book newBook = new Book(isbn, bookName, category, author, image);
+                BookCollection.InsertOne(newBook);
                 return $"New book: \"{bookName}\" by \"{author}\" added successfully!";
             }
 
             return $"Book \"{bookName}\" already exists, please try again.";
         }
 
-        public static bool RemoveBook(ObjectId id)
+        public static string RemoveBook(ObjectId id)
         {
             try
             {
-                BookCollection.DeleteOne(a => a.Id == id);
-                return true;
+                if ((int)BookCollection.Find(b => b.Id == id && b.BorrowState != "Borrowing").CountDocuments() == 0)
+                    return "Book currently in use, please try again at another time.";
+                {
+                    BookCollection.DeleteOne(b => b.Id == id);
+                    return "Book deleted successfully!";
+                }
             }
             catch (Exception)
             {
-                return false;
+                return "Something went wrong, please try again.";
+            }
+        }
+
+        public static string UpdateBook(string id, string isbn, string bookName, string category, string author,
+            string image)
+        {
+            try
+            {
+                var updateDefinition = Builders<Book>.Update
+                    .Set(b => b.Isbn, isbn)
+                    .Set(b => b.BookName, bookName)
+                    .Set(b => b.Category, category)
+                    .Set(b => b.Author, author)
+                    .Set(b => b.Image, image);
+                BookCollection.UpdateOne(b => b.Id == ObjectId.Parse(id), updateDefinition);
+                return "Updated book successfully.";
+            }
+            catch (Exception)
+            {
+                return "Something went wrong, please try again.";
             }
         }
     }

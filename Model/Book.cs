@@ -14,7 +14,7 @@ namespace AdvancedProgrammingAssignment2.Model
             Category = category;
             Author = author;
             Image = image;
-            Availability = "Available";
+            BorrowState = "Available";
         }
 
         [BsonElement("isbn")] internal string Isbn { get; set; }
@@ -22,6 +22,6 @@ namespace AdvancedProgrammingAssignment2.Model
         [BsonElement("category")] internal string Category { get; set; }
         [BsonElement("author")] internal string Author { get; set; }
         [BsonElement("image")] internal string Image { get; set; }
-        [BsonElement("availability")] internal string Availability { get; set; }
+        [BsonElement("availability")] internal string BorrowState { get; set; }
     }
 }

@@ -5,6 +5,7 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::01284132-A854-48CC-979F-FFBBE6521F08::.NETFramework,Version=v4.8.1::Testing2.Tests.GetAllAccountsTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::01284132-A854-48CC-979F-FFBBE6521F08::.NETFramework,Version=v4.8.1::Testing2.Tests.TestAddCategory&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::01284132-A854-48CC-979F-FFBBE6521F08::.NETFramework,Version=v4.8.1::Testing2.Tests.LoginTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FProperties_002FResources/@EntryIndexedValue">True</s:Boolean>
