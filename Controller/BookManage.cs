@@ -1,9 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.DirectoryServices.ActiveDirectory;
-using System.Runtime.CompilerServices;
-using System.Windows;
-using System.Windows.Markup;
 using AdvancedProgrammingAssignment2.Model;
 using MongoDB.Bson;
 using MongoDB.Driver;

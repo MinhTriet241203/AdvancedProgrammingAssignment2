@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using AdvancedProgrammingAssignment2.Model;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using MongoDB.Driver.Linq;
 
 namespace AdvancedProgrammingAssignment2.Controller
 {
@@ -27,9 +28,22 @@ namespace AdvancedProgrammingAssignment2.Controller
             return list;
         }
 
+        public static List<Account> GetAllLibrarians()
+        {
+            var list = Collection.AsQueryable().Where(a => a.AccountClass == "Librarians" ).ToList();
+            return list;
+        }
+
+        public static List<Account> GetAllUsers()
+        {
+            var list = Collection.AsQueryable().Where(a => a.AccountClass == "Users").ToList();
+            return list;
+        }
+
         public List<Account> SearchAccount(string searchKeyword)
         {
-            var accountList = Collection.Find(a => a.Email.Contains(searchKeyword) || a.Name.Contains(searchKeyword)).ToList();
+            var accountList = Collection.Find(a => a.Email.Contains(searchKeyword) || a.Name.Contains(searchKeyword))
+                .ToList();
             return accountList;
         }
 
@@ -88,6 +102,5 @@ namespace AdvancedProgrammingAssignment2.Controller
                 .Set(a => a.Name, name);
             Collection.UpdateOne(a => a.Id == ObjectId.Parse(id), updateDefinition);
         }
-
     }
 }
