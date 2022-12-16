@@ -95,10 +95,6 @@ namespace AdvancedProgrammingAssignment2.View
         {
             ActivateButton(sender, RgbColors.Color2);
             OpenChildForm(new CategoryForm());
-            
-            
-            
-            
         }
 
         private void buttonBooks_Click(object sender, EventArgs e)

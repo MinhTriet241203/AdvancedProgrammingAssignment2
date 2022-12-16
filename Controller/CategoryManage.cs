@@ -16,7 +16,7 @@ namespace AdvancedProgrammingAssignment2.Controller
         private static readonly IMongoDatabase Database = Client.GetDatabase("LibrarySystem");
 
         //reaching into the category and book table, these are the collections that is retrieved from the database
-        public static readonly IMongoCollection<Category> CategoryCollection =
+        private static readonly IMongoCollection<Category> CategoryCollection =
             Database.GetCollection<Category>("Categories");
 
         private static readonly IMongoCollection<Book> BookCollection = Database.GetCollection<Book>("Books");
@@ -55,8 +55,6 @@ namespace AdvancedProgrammingAssignment2.Controller
             CategoryCollection.DeleteOne(c => c.Id == ObjectId.Parse(id));
             Console.WriteLine($"Deleted category \"{category}\" successfully!");
             return true;
-
-            //todo: add some interaction here if return false, or do so in the view part
         }
 
         public static void UpdateCategory(string id, string categoryName)

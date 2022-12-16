@@ -35,5 +35,10 @@ namespace AdvancedProgrammingAssignment2.View
             CategoryManage.DeleteCategory(textBoxId.Text);
             dataGridViewCategory.DataSource = CategoryManage.ShowCategory();
         }
+
+        private void iconButtonSearch_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
