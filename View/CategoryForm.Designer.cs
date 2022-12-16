@@ -40,6 +40,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonCreate = new FontAwesome.Sharp.IconButton();
             this.iconButtonDelete = new FontAwesome.Sharp.IconButton();
             this.iconButtonUpdate = new FontAwesome.Sharp.IconButton();
+            this.textBoxId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.labelTitle.Location = new System.Drawing.Point(0, 0);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.labelTitle.Size = new System.Drawing.Size(994, 66);
+            this.labelTitle.Size = new System.Drawing.Size(978, 66);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Category Management";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -157,6 +158,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonDelete.UseVisualStyleBackColor = false;
+            this.iconButtonDelete.Click += new System.EventHandler(this.iconButtonDelete_Click);
             // 
             // iconButtonUpdate
             // 
@@ -179,6 +181,17 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonUpdate.UseVisualStyleBackColor = false;
+            this.iconButtonUpdate.Click += new System.EventHandler(this.iconButtonUpdate_Click);
+            // 
+            // textBoxId
+            // 
+            this.textBoxId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxId.Location = new System.Drawing.Point(506, 287);
+            this.textBoxId.Multiline = true;
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.Size = new System.Drawing.Size(500, 23);
+            this.textBoxId.TabIndex = 10;
+            this.textBoxId.Visible = false;
             // 
             // CategoryForm
             // 
@@ -186,8 +199,9 @@ namespace AdvancedProgrammingAssignment2.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(994, 538);
+            this.ClientSize = new System.Drawing.Size(978, 522);
             this.ControlBox = false;
+            this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.iconButtonUpdate);
             this.Controls.Add(this.iconButtonDelete);
             this.Controls.Add(this.iconButtonCreate);
@@ -209,6 +223,8 @@ namespace AdvancedProgrammingAssignment2.View
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.TextBox textBoxId;
 
         private FontAwesome.Sharp.IconButton iconButtonDelete;
 
