@@ -31,6 +31,7 @@ namespace AdvancedProgrammingAssignment2.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelTitle = new System.Windows.Forms.Label();
             this.separator = new System.Windows.Forms.Label();
             this.dataGridViewCategory = new System.Windows.Forms.DataGridView();
@@ -49,12 +50,13 @@ namespace AdvancedProgrammingAssignment2.View
             // labelTitle
             // 
             this.labelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelTitle.Font = new System.Drawing.Font("Lato Black", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.labelTitle.Location = new System.Drawing.Point(0, 0);
+            this.labelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.labelTitle.Size = new System.Drawing.Size(978, 66);
+            this.labelTitle.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.labelTitle.Size = new System.Drawing.Size(1287, 81);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Category Management";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -63,10 +65,10 @@ namespace AdvancedProgrammingAssignment2.View
             // 
             this.separator.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.separator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.separator.Location = new System.Drawing.Point(12, 65);
+            this.separator.Location = new System.Drawing.Point(16, 80);
             this.separator.Margin = new System.Windows.Forms.Padding(0);
             this.separator.Name = "separator";
-            this.separator.Size = new System.Drawing.Size(1012, 2);
+            this.separator.Size = new System.Drawing.Size(1349, 2);
             this.separator.TabIndex = 1;
             // 
             // dataGridViewCategory
@@ -75,45 +77,59 @@ namespace AdvancedProgrammingAssignment2.View
             this.dataGridViewCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCategory.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridViewCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCategory.Location = new System.Drawing.Point(12, 73);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCategory.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewCategory.Location = new System.Drawing.Point(16, 143);
+            this.dataGridViewCategory.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewCategory.MultiSelect = false;
             this.dataGridViewCategory.Name = "dataGridViewCategory";
             this.dataGridViewCategory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridViewCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCategory.Size = new System.Drawing.Size(464, 502);
+            this.dataGridViewCategory.Size = new System.Drawing.Size(619, 482);
             this.dataGridViewCategory.TabIndex = 2;
             this.dataGridViewCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCategory_CellContentClick);
             // 
             // labelCategory
             // 
             this.labelCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelCategory.Font = new System.Drawing.Font("Lato", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
-            this.labelCategory.Location = new System.Drawing.Point(482, 88);
+            this.labelCategory.Location = new System.Drawing.Point(675, 125);
+            this.labelCategory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCategory.Name = "labelCategory";
-            this.labelCategory.Size = new System.Drawing.Size(544, 31);
+            this.labelCategory.Size = new System.Drawing.Size(586, 38);
             this.labelCategory.TabIndex = 3;
-            this.labelCategory.Text = "Category";
+            this.labelCategory.Text = "Category info";
             this.labelCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelName
             // 
             this.labelName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelName.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
-            this.labelName.Location = new System.Drawing.Point(516, 144);
+            this.labelName.Location = new System.Drawing.Point(675, 219);
+            this.labelName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(121, 22);
+            this.labelName.Size = new System.Drawing.Size(204, 37);
             this.labelName.TabIndex = 4;
-            this.labelName.Text = "Category Name";
+            this.labelName.Text = "Category Name:";
+            this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBoxName
             // 
             this.textBoxName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxName.Location = new System.Drawing.Point(506, 169);
+            this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxName.Location = new System.Drawing.Point(887, 219);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(500, 23);
+            this.textBoxName.Size = new System.Drawing.Size(374, 37);
             this.textBoxName.TabIndex = 6;
             // 
             // iconButtonCreate
@@ -123,17 +139,18 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonCreate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButtonCreate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.iconButtonCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonCreate.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonCreate.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.iconButtonCreate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonCreate.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonCreate.IconSize = 30;
-            this.iconButtonCreate.Location = new System.Drawing.Point(506, 225);
+            this.iconButtonCreate.Location = new System.Drawing.Point(675, 277);
+            this.iconButtonCreate.Margin = new System.Windows.Forms.Padding(4);
             this.iconButtonCreate.Name = "iconButtonCreate";
-            this.iconButtonCreate.Size = new System.Drawing.Size(126, 36);
+            this.iconButtonCreate.Size = new System.Drawing.Size(168, 44);
             this.iconButtonCreate.TabIndex = 7;
-            this.iconButtonCreate.Text = "Create";
+            this.iconButtonCreate.Text = "Add";
             this.iconButtonCreate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonCreate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonCreate.UseVisualStyleBackColor = false;
@@ -146,15 +163,16 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButtonDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.iconButtonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonDelete.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonDelete.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
             this.iconButtonDelete.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonDelete.IconSize = 30;
-            this.iconButtonDelete.Location = new System.Drawing.Point(880, 225);
+            this.iconButtonDelete.Location = new System.Drawing.Point(1093, 277);
+            this.iconButtonDelete.Margin = new System.Windows.Forms.Padding(4);
             this.iconButtonDelete.Name = "iconButtonDelete";
-            this.iconButtonDelete.Size = new System.Drawing.Size(126, 36);
+            this.iconButtonDelete.Size = new System.Drawing.Size(168, 44);
             this.iconButtonDelete.TabIndex = 8;
             this.iconButtonDelete.Text = "Delete";
             this.iconButtonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -169,15 +187,16 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButtonUpdate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.iconButtonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonUpdate.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonUpdate.IconChar = FontAwesome.Sharp.IconChar.CircleUp;
             this.iconButtonUpdate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonUpdate.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButtonUpdate.IconSize = 30;
-            this.iconButtonUpdate.Location = new System.Drawing.Point(691, 225);
+            this.iconButtonUpdate.Location = new System.Drawing.Point(887, 277);
+            this.iconButtonUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.iconButtonUpdate.Name = "iconButtonUpdate";
-            this.iconButtonUpdate.Size = new System.Drawing.Size(126, 36);
+            this.iconButtonUpdate.Size = new System.Drawing.Size(168, 44);
             this.iconButtonUpdate.TabIndex = 9;
             this.iconButtonUpdate.Text = "Update";
             this.iconButtonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -188,20 +207,22 @@ namespace AdvancedProgrammingAssignment2.View
             // textBoxId
             // 
             this.textBoxId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxId.Location = new System.Drawing.Point(506, 287);
+            this.textBoxId.Location = new System.Drawing.Point(675, 353);
+            this.textBoxId.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxId.Multiline = true;
             this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(500, 23);
+            this.textBoxId.Size = new System.Drawing.Size(665, 27);
             this.textBoxId.TabIndex = 10;
             this.textBoxId.Visible = false;
             // 
             // textBoxSearch
             // 
             this.textBoxSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxSearch.Location = new System.Drawing.Point(12, 82);
+            this.textBoxSearch.Location = new System.Drawing.Point(16, 101);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSearch.Multiline = true;
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(354, 28);
+            this.textBoxSearch.Size = new System.Drawing.Size(471, 34);
             this.textBoxSearch.TabIndex = 11;
             // 
             // iconButtonSearch
@@ -211,17 +232,17 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButtonSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.iconButtonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonSearch.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.iconButtonSearch.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonSearch.IconSize = 18;
             this.iconButtonSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconButtonSearch.Location = new System.Drawing.Point(372, 82);
+            this.iconButtonSearch.Location = new System.Drawing.Point(496, 101);
             this.iconButtonSearch.Margin = new System.Windows.Forms.Padding(0);
             this.iconButtonSearch.Name = "iconButtonSearch";
-            this.iconButtonSearch.Size = new System.Drawing.Size(104, 28);
+            this.iconButtonSearch.Size = new System.Drawing.Size(139, 34);
             this.iconButtonSearch.TabIndex = 12;
             this.iconButtonSearch.Text = "Search";
             this.iconButtonSearch.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -231,11 +252,11 @@ namespace AdvancedProgrammingAssignment2.View
             // 
             // CategoryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(978, 522);
+            this.ClientSize = new System.Drawing.Size(1287, 626);
             this.ControlBox = false;
             this.Controls.Add(this.iconButtonSearch);
             this.Controls.Add(this.textBoxSearch);
@@ -251,6 +272,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.Controls.Add(this.labelTitle);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CategoryForm";
