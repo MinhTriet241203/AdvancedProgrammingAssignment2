@@ -368,6 +368,9 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
+        <EmbeddedResource Include="View\BookForm.resx">
+          <DependentUpon>BookForm.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="View\CategoryForm.resx">
             <DependentUpon>CategoryForm.cs</DependentUpon>
         </EmbeddedResource>

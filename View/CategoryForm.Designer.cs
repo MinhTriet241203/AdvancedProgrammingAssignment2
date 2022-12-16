@@ -86,7 +86,7 @@ namespace AdvancedProgrammingAssignment2.View
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewCategory.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewCategory.Location = new System.Drawing.Point(16, 125);
+            this.dataGridViewCategory.Location = new System.Drawing.Point(18, 127);
             this.dataGridViewCategory.MultiSelect = false;
             this.dataGridViewCategory.Name = "dataGridViewCategory";
             this.dataGridViewCategory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
@@ -111,7 +111,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.labelName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
-            this.labelName.Location = new System.Drawing.Point(533, 157);
+            this.labelName.Location = new System.Drawing.Point(535, 159);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(142, 30);
             this.labelName.TabIndex = 4;
@@ -122,7 +122,7 @@ namespace AdvancedProgrammingAssignment2.View
             // 
             this.textBoxName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxName.Location = new System.Drawing.Point(681, 159);
+            this.textBoxName.Location = new System.Drawing.Point(683, 161);
             this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(338, 31);
@@ -141,7 +141,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonCreate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonCreate.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonCreate.IconSize = 30;
-            this.iconButtonCreate.Location = new System.Drawing.Point(533, 233);
+            this.iconButtonCreate.Location = new System.Drawing.Point(535, 235);
             this.iconButtonCreate.Name = "iconButtonCreate";
             this.iconButtonCreate.Size = new System.Drawing.Size(126, 36);
             this.iconButtonCreate.TabIndex = 7;
@@ -164,7 +164,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonDelete.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonDelete.IconSize = 30;
-            this.iconButtonDelete.Location = new System.Drawing.Point(893, 233);
+            this.iconButtonDelete.Location = new System.Drawing.Point(895, 235);
             this.iconButtonDelete.Name = "iconButtonDelete";
             this.iconButtonDelete.Size = new System.Drawing.Size(126, 36);
             this.iconButtonDelete.TabIndex = 8;
@@ -187,7 +187,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonUpdate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonUpdate.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButtonUpdate.IconSize = 30;
-            this.iconButtonUpdate.Location = new System.Drawing.Point(711, 233);
+            this.iconButtonUpdate.Location = new System.Drawing.Point(713, 235);
             this.iconButtonUpdate.Name = "iconButtonUpdate";
             this.iconButtonUpdate.Size = new System.Drawing.Size(126, 36);
             this.iconButtonUpdate.TabIndex = 9;
@@ -200,7 +200,7 @@ namespace AdvancedProgrammingAssignment2.View
             // textBoxId
             // 
             this.textBoxId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxId.Location = new System.Drawing.Point(547, 310);
+            this.textBoxId.Location = new System.Drawing.Point(549, 312);
             this.textBoxId.Multiline = true;
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(440, 23);
@@ -210,7 +210,7 @@ namespace AdvancedProgrammingAssignment2.View
             // textBoxSearch
             // 
             this.textBoxSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxSearch.Location = new System.Drawing.Point(16, 91);
+            this.textBoxSearch.Location = new System.Drawing.Point(18, 93);
             this.textBoxSearch.Multiline = true;
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(391, 28);
@@ -230,7 +230,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonSearch.IconSize = 18;
             this.iconButtonSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconButtonSearch.Location = new System.Drawing.Point(410, 91);
+            this.iconButtonSearch.Location = new System.Drawing.Point(412, 93);
             this.iconButtonSearch.Margin = new System.Windows.Forms.Padding(0);
             this.iconButtonSearch.Name = "iconButtonSearch";
             this.iconButtonSearch.Size = new System.Drawing.Size(104, 28);

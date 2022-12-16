@@ -9,6 +9,8 @@
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FProperties_002FResources/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FBookForm/@EntryIndexedValue">True</s:Boolean>
+	
 	
 	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FLibraryApp/@EntryIndexedValue">True</s:Boolean>

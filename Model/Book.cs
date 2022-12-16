@@ -5,9 +5,9 @@ namespace AdvancedProgrammingAssignment2.Model
 {
     public class Book
     {
-        [BsonId] internal ObjectId Id;
+        [BsonId] public ObjectId Id;
 
-        protected internal Book(string isbn, string bookName, string category, string author, string image)
+        public Book(string isbn, string bookName, string category, string author, string image)
         {
             Isbn = isbn;
             BookName = bookName;
@@ -17,11 +17,11 @@ namespace AdvancedProgrammingAssignment2.Model
             BorrowState = "Available";
         }
 
-        [BsonElement("isbn")] internal string Isbn { get; set; }
-        [BsonElement("bookName")] internal string BookName { get; set; }
-        [BsonElement("category")] internal string Category { get; set; }
-        [BsonElement("author")] internal string Author { get; set; }
-        [BsonElement("image")] internal string Image { get; set; }
-        [BsonElement("availability")] internal string BorrowState { get; set; }
+        [BsonElement("isbn")] public string Isbn { get; set; }
+        [BsonElement("bookName")] public string BookName { get; set; }
+        [BsonElement("category")] public string Category { get; set; }
+        [BsonElement("author")] public string Author { get; set; }
+        [BsonElement("image")] public string Image { get; set; }
+        [BsonElement("availability")] public string BorrowState { get; set; }
     }
 }
