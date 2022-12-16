@@ -46,13 +46,16 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonSearch = new FontAwesome.Sharp.IconButton();
             this.textBoxIsbn = new System.Windows.Forms.TextBox();
             this.labelIsbn = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxAuthor = new System.Windows.Forms.TextBox();
             this.labelAuthor = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxCategory = new System.Windows.Forms.TextBox();
+            this.labelCategory = new System.Windows.Forms.Label();
+            this.textBoxState = new System.Windows.Forms.TextBox();
+            this.labelState = new System.Windows.Forms.Label();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.buttonAddImage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -63,7 +66,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.labelTitle.Location = new System.Drawing.Point(0, 0);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.labelTitle.Size = new System.Drawing.Size(1040, 66);
+            this.labelTitle.Size = new System.Drawing.Size(1032, 66);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Book Management";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -75,7 +78,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.separator.Location = new System.Drawing.Point(0, 66);
             this.separator.Margin = new System.Windows.Forms.Padding(0);
             this.separator.Name = "separator";
-            this.separator.Size = new System.Drawing.Size(1040, 2);
+            this.separator.Size = new System.Drawing.Size(1032, 2);
             this.separator.TabIndex = 1;
             // 
             // dataGridViewBook
@@ -143,7 +146,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonCreate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonCreate.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonCreate.IconSize = 30;
-            this.iconButtonCreate.Location = new System.Drawing.Point(559, 517);
+            this.iconButtonCreate.Location = new System.Drawing.Point(899, 395);
             this.iconButtonCreate.Name = "iconButtonCreate";
             this.iconButtonCreate.Size = new System.Drawing.Size(126, 36);
             this.iconButtonCreate.TabIndex = 7;
@@ -187,7 +190,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonUpdate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonUpdate.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButtonUpdate.IconSize = 30;
-            this.iconButtonUpdate.Location = new System.Drawing.Point(728, 517);
+            this.iconButtonUpdate.Location = new System.Drawing.Point(899, 457);
             this.iconButtonUpdate.Name = "iconButtonUpdate";
             this.iconButtonUpdate.Size = new System.Drawing.Size(126, 36);
             this.iconButtonUpdate.TabIndex = 9;
@@ -200,10 +203,10 @@ namespace AdvancedProgrammingAssignment2.View
             // textBoxId
             // 
             this.textBoxId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxId.Location = new System.Drawing.Point(49, 283);
+            this.textBoxId.Location = new System.Drawing.Point(539, 87);
             this.textBoxId.Multiline = true;
             this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(440, 23);
+            this.textBoxId.Size = new System.Drawing.Size(78, 23);
             this.textBoxId.TabIndex = 10;
             this.textBoxId.Visible = false;
             // 
@@ -242,7 +245,7 @@ namespace AdvancedProgrammingAssignment2.View
             // textBoxIsbn
             // 
             this.textBoxIsbn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIsbn.Location = new System.Drawing.Point(687, 181);
+            this.textBoxIsbn.Location = new System.Drawing.Point(687, 165);
             this.textBoxIsbn.Multiline = true;
             this.textBoxIsbn.Name = "textBoxIsbn";
             this.textBoxIsbn.Size = new System.Drawing.Size(338, 31);
@@ -252,84 +255,109 @@ namespace AdvancedProgrammingAssignment2.View
             // 
             this.labelIsbn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIsbn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
-            this.labelIsbn.Location = new System.Drawing.Point(543, 182);
+            this.labelIsbn.Location = new System.Drawing.Point(543, 166);
             this.labelIsbn.Name = "labelIsbn";
             this.labelIsbn.Size = new System.Drawing.Size(98, 30);
             this.labelIsbn.TabIndex = 13;
             this.labelIsbn.Text = "ISBN: ";
             this.labelIsbn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // textBoxAuthor
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(687, 233);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(338, 31);
-            this.textBox1.TabIndex = 16;
+            this.textBoxAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAuthor.Location = new System.Drawing.Point(687, 202);
+            this.textBoxAuthor.Multiline = true;
+            this.textBoxAuthor.Name = "textBoxAuthor";
+            this.textBoxAuthor.Size = new System.Drawing.Size(338, 31);
+            this.textBoxAuthor.TabIndex = 16;
             // 
             // labelAuthor
             // 
             this.labelAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAuthor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
-            this.labelAuthor.Location = new System.Drawing.Point(550, 234);
+            this.labelAuthor.Location = new System.Drawing.Point(550, 203);
             this.labelAuthor.Name = "labelAuthor";
             this.labelAuthor.Size = new System.Drawing.Size(98, 30);
             this.labelAuthor.TabIndex = 15;
             this.labelAuthor.Text = "Author: ";
             this.labelAuthor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // textBoxCategory
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(687, 283);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(338, 31);
-            this.textBox2.TabIndex = 18;
+            this.textBoxCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCategory.Location = new System.Drawing.Point(687, 239);
+            this.textBoxCategory.Multiline = true;
+            this.textBoxCategory.Name = "textBoxCategory";
+            this.textBoxCategory.Size = new System.Drawing.Size(338, 31);
+            this.textBoxCategory.TabIndex = 18;
             // 
-            // label2
+            // labelCategory
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
-            this.label2.Location = new System.Drawing.Point(543, 284);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 30);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "ISBN: ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.labelCategory.Location = new System.Drawing.Point(552, 240);
+            this.labelCategory.Name = "labelCategory";
+            this.labelCategory.Size = new System.Drawing.Size(98, 30);
+            this.labelCategory.TabIndex = 17;
+            this.labelCategory.Text = "Category:";
+            this.labelCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox3
+            // textBoxState
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(687, 334);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(338, 31);
-            this.textBox3.TabIndex = 20;
+            this.textBoxState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxState.Location = new System.Drawing.Point(687, 276);
+            this.textBoxState.Multiline = true;
+            this.textBoxState.Name = "textBoxState";
+            this.textBoxState.Size = new System.Drawing.Size(338, 31);
+            this.textBoxState.TabIndex = 20;
             // 
-            // label3
+            // labelState
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
-            this.label3.Location = new System.Drawing.Point(543, 335);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 30);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "ISBN: ";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.labelState.Location = new System.Drawing.Point(543, 276);
+            this.labelState.Name = "labelState";
+            this.labelState.Size = new System.Drawing.Size(98, 30);
+            this.labelState.TabIndex = 19;
+            this.labelState.Text = "State:";
+            this.labelState.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.Location = new System.Drawing.Point(550, 314);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(200, 250);
+            this.pictureBox.TabIndex = 21;
+            this.pictureBox.TabStop = false;
+            // 
+            // buttonAddImage
+            // 
+            this.buttonAddImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(175)))), ((int)(((byte)(204)))));
+            this.buttonAddImage.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(175)))), ((int)(((byte)(204)))));
+            this.buttonAddImage.FlatAppearance.BorderSize = 0;
+            this.buttonAddImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddImage.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddImage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.buttonAddImage.Location = new System.Drawing.Point(899, 335);
+            this.buttonAddImage.Name = "buttonAddImage";
+            this.buttonAddImage.Size = new System.Drawing.Size(126, 36);
+            this.buttonAddImage.TabIndex = 22;
+            this.buttonAddImage.Text = "Add image";
+            this.buttonAddImage.UseVisualStyleBackColor = false;
             // 
             // BookForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(1040, 584);
+            this.ClientSize = new System.Drawing.Size(1032, 576);
             this.ControlBox = false;
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.buttonAddImage);
+            this.Controls.Add(this.pictureBox);
+            this.Controls.Add(this.textBoxState);
+            this.Controls.Add(this.labelState);
+            this.Controls.Add(this.textBoxCategory);
+            this.Controls.Add(this.labelCategory);
+            this.Controls.Add(this.textBoxAuthor);
             this.Controls.Add(this.labelAuthor);
             this.Controls.Add(this.textBoxIsbn);
             this.Controls.Add(this.labelIsbn);
@@ -354,19 +382,26 @@ namespace AdvancedProgrammingAssignment2.View
             this.ShowInTaskbar = false;
             this.Text = "CategoryForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
 
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox;
+
+        private System.Windows.Forms.Button buttonAddImage;
+
+        private System.Windows.Forms.PictureBox pictureBox1;
+
+        private System.Windows.Forms.TextBox textBoxCategory;
+        private System.Windows.Forms.Label labelCategory;
+        private System.Windows.Forms.TextBox textBoxState;
+        private System.Windows.Forms.Label labelState;
 
         private System.Windows.Forms.Label labelIsbn;
         private System.Windows.Forms.TextBox textBoxIsbn;
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxAuthor;
         private System.Windows.Forms.Label labelAuthor;
 
         private System.Windows.Forms.TextBox textBoxSearch;

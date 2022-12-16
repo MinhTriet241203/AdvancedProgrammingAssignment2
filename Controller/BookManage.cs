@@ -21,7 +21,7 @@ namespace AdvancedProgrammingAssignment2.Controller
 
         private static readonly IMongoCollection<Book> BookCollection = Database.GetCollection<Book>("Books");
 
-        public static List<Book> GetBooks()
+        public static List<Book> ShowBooks()
         {
             //return the book list
             var books = BookCollection.AsQueryable().ToList();
