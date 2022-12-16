@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using AdvancedProgrammingAssignment2.Model;
 using MongoDB.Bson;
 using MongoDB.Driver;
@@ -57,10 +58,12 @@ namespace AdvancedProgrammingAssignment2.Controller
         //here is the search method, in implementation there should be a check for null result
         public static List<Category> SearchCategory(string categoryName)
         {
-            if (CategoryExists(categoryName))
+            var queryExpr = new BsonRegularExpression(new Regex(categoryName, RegexOptions.IgnoreCase)); 
+            var filter = Builders<Category>.Filter.Regex("categoryName", queryExpr);
+            _categoryList = CategoryCollection.Find(filter).ToList();
+            if (_categoryList != null)
             {
-                var searchedCategory = CategoryCollection.Find(c => c.CategoryName.Contains(categoryName)).ToList();
-                return searchedCategory;
+                return _categoryList;
             }
             return null;
         }
