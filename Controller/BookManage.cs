@@ -23,6 +23,7 @@ namespace AdvancedProgrammingAssignment2.Controller
 
         public static List<Book> GetBooks()
         {
+            //return the book list
             var books = BookCollection.AsQueryable().ToList();
             return books;
             //then over on the view side we can check the length of the books list 
@@ -35,6 +36,7 @@ namespace AdvancedProgrammingAssignment2.Controller
             return searchedBooks;
         }
 
+        //receives information about the book, minus the Id and the BorrowStatus
         public static string AddBook(string isbn, string bookName, string category, string author, string image)
         {
             var filter = Builders<Category>.Filter.Eq("CategoryName", category);
@@ -48,14 +50,16 @@ namespace AdvancedProgrammingAssignment2.Controller
             return $"Book \"{bookName}\" already exists, please try again.";
         }
 
-        public static string RemoveBook(ObjectId id)
+        //remove the book using id
+        public static string RemoveBook(string id)
         {
             try
             {
-                if ((int)BookCollection.Find(b => b.Id == id && b.BorrowState != "Borrowing").CountDocuments() == 0)
+                if ((int)BookCollection.Find(b => b.Id == ObjectId.Parse(id) && b.BorrowState != "Borrowing")
+                        .CountDocuments() == 0)
                     return "Book currently in use, please try again at another time.";
                 {
-                    BookCollection.DeleteOne(b => b.Id == id);
+                    BookCollection.DeleteOne(b => b.Id == ObjectId.Parse(id));
                     return "Book deleted successfully!";
                 }
             }
@@ -65,6 +69,7 @@ namespace AdvancedProgrammingAssignment2.Controller
             }
         }
 
+        //update book receiving id and information, minus BorrowState
         public static string UpdateBook(string id, string isbn, string bookName, string category, string author,
             string image)
         {
