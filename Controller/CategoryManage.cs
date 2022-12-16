@@ -21,8 +21,14 @@ namespace AdvancedProgrammingAssignment2.Controller
 
         private static readonly IMongoCollection<Book> BookCollection = Database.GetCollection<Book>("Books");
 
-        private List<Category> _categoryList = new List<Category>();
+        private static List<Category> _categoryList = new List<Category>();
 
+        public static List<Category> ShowCategory()
+        {
+            _categoryList = CategoryCollection.Find(new BsonDocument()).ToList();
+            return _categoryList;
+        }
+        
         //use the category constructor then insert the newly created category into the collection
         public static void AddCategory(string categoryName)
         {

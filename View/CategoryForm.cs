@@ -12,18 +12,18 @@ namespace AdvancedProgrammingAssignment2.View
         public CategoryForm()
         {
             InitializeComponent();
-
-            var list = CategoryManage.CategoryCollection.Find(new BsonDocument()).ToList();
-
-            var dt = new DataTable();
-            dt.Columns.Add("Category Name", typeof(string));
-            foreach (var cate in list) dt.Rows.Add(cate.CategoryName);
-
+            dataGridViewCategory.DataSource = CategoryManage.ShowCategory();
         }
 
         private void dataGridViewCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            throw new NotImplementedException();
+            textBoxName.Text = dataGridViewCategory.Rows[e.RowIndex].Cells[0].Value.ToString();
+        }
+
+        private void iconButtonCreate_Click(object sender, EventArgs e)
+        {
+            CategoryManage.AddCategory(textBoxName.Text);
+            dataGridViewCategory.DataSource = CategoryManage.ShowCategory();
         }
     }
 }

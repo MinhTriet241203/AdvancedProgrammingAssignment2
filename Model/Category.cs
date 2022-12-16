@@ -10,7 +10,7 @@ namespace AdvancedProgrammingAssignment2.Model
             CategoryName = categoryName;
         }
 
-        [BsonId] internal ObjectId Id { get; set; }
+        [BsonId] public ObjectId Id { get; set; }
 
         [BsonElement("categoryName")]
         [BsonRequired]
