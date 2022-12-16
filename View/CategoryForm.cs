@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using AdvancedProgrammingAssignment2.Controller;
 
@@ -42,12 +43,22 @@ namespace AdvancedProgrammingAssignment2.View
             {
                 var result = CategoryManage.DeleteCategory(textBoxId.Text);
                 dataGridViewCategory.DataSource = CategoryManage.ShowCategory();
-                MessageBox.Show(result, "Message");
+                MessageBox.Show(result, @"Message");
             }
         }
 
         private void iconButtonSearch_Click(object sender, EventArgs e)
         {
+            var list = CategoryManage.SearchCategory(textBoxSearch.Text);
+            if (list != null)
+            {
+                dataGridViewCategory.DataSource = list;
+            }
+            else
+            {
+                dataGridViewCategory.DataSource = CategoryManage.ShowCategory();
+                MessageBox.Show(@"No result for """ + textBoxSearch.Text + @""" :(", @"Message");
+            }
         }
     }
 }

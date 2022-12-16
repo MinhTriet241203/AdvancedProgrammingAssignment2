@@ -44,6 +44,8 @@ namespace AdvancedProgrammingAssignment2.View
             this.textBoxId = new System.Windows.Forms.TextBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.iconButtonSearch = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,22 +55,21 @@ namespace AdvancedProgrammingAssignment2.View
             this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.labelTitle.Location = new System.Drawing.Point(0, 0);
-            this.labelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.labelTitle.Size = new System.Drawing.Size(1287, 81);
+            this.labelTitle.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.labelTitle.Size = new System.Drawing.Size(1048, 66);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Category Management";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // separator
             // 
-            this.separator.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.separator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.separator.Location = new System.Drawing.Point(16, 80);
+            this.separator.Dock = System.Windows.Forms.DockStyle.Top;
+            this.separator.Location = new System.Drawing.Point(0, 66);
             this.separator.Margin = new System.Windows.Forms.Padding(0);
             this.separator.Name = "separator";
-            this.separator.Size = new System.Drawing.Size(1349, 2);
+            this.separator.Size = new System.Drawing.Size(1048, 2);
             this.separator.TabIndex = 1;
             // 
             // dataGridViewCategory
@@ -85,25 +86,22 @@ namespace AdvancedProgrammingAssignment2.View
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewCategory.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewCategory.Location = new System.Drawing.Point(16, 143);
-            this.dataGridViewCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewCategory.Location = new System.Drawing.Point(16, 125);
             this.dataGridViewCategory.MultiSelect = false;
             this.dataGridViewCategory.Name = "dataGridViewCategory";
             this.dataGridViewCategory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridViewCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCategory.Size = new System.Drawing.Size(619, 482);
+            this.dataGridViewCategory.Size = new System.Drawing.Size(498, 455);
             this.dataGridViewCategory.TabIndex = 2;
             this.dataGridViewCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCategory_CellContentClick);
             // 
             // labelCategory
             // 
-            this.labelCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
-            this.labelCategory.Location = new System.Drawing.Point(675, 125);
-            this.labelCategory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCategory.Location = new System.Drawing.Point(533, 91);
             this.labelCategory.Name = "labelCategory";
-            this.labelCategory.Size = new System.Drawing.Size(586, 38);
+            this.labelCategory.Size = new System.Drawing.Size(486, 31);
             this.labelCategory.TabIndex = 3;
             this.labelCategory.Text = "Category info";
             this.labelCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -113,10 +111,9 @@ namespace AdvancedProgrammingAssignment2.View
             this.labelName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
-            this.labelName.Location = new System.Drawing.Point(675, 219);
-            this.labelName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelName.Location = new System.Drawing.Point(533, 157);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(204, 37);
+            this.labelName.Size = new System.Drawing.Size(142, 30);
             this.labelName.TabIndex = 4;
             this.labelName.Text = "Category Name:";
             this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -125,11 +122,10 @@ namespace AdvancedProgrammingAssignment2.View
             // 
             this.textBoxName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxName.Location = new System.Drawing.Point(887, 219);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxName.Location = new System.Drawing.Point(681, 159);
             this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(374, 37);
+            this.textBoxName.Size = new System.Drawing.Size(338, 31);
             this.textBoxName.TabIndex = 6;
             // 
             // iconButtonCreate
@@ -145,10 +141,9 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonCreate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonCreate.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonCreate.IconSize = 30;
-            this.iconButtonCreate.Location = new System.Drawing.Point(675, 277);
-            this.iconButtonCreate.Margin = new System.Windows.Forms.Padding(4);
+            this.iconButtonCreate.Location = new System.Drawing.Point(533, 233);
             this.iconButtonCreate.Name = "iconButtonCreate";
-            this.iconButtonCreate.Size = new System.Drawing.Size(168, 44);
+            this.iconButtonCreate.Size = new System.Drawing.Size(126, 36);
             this.iconButtonCreate.TabIndex = 7;
             this.iconButtonCreate.Text = "Add";
             this.iconButtonCreate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -169,10 +164,9 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonDelete.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonDelete.IconSize = 30;
-            this.iconButtonDelete.Location = new System.Drawing.Point(1093, 277);
-            this.iconButtonDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.iconButtonDelete.Location = new System.Drawing.Point(893, 233);
             this.iconButtonDelete.Name = "iconButtonDelete";
-            this.iconButtonDelete.Size = new System.Drawing.Size(168, 44);
+            this.iconButtonDelete.Size = new System.Drawing.Size(126, 36);
             this.iconButtonDelete.TabIndex = 8;
             this.iconButtonDelete.Text = "Delete";
             this.iconButtonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -193,10 +187,9 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonUpdate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonUpdate.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButtonUpdate.IconSize = 30;
-            this.iconButtonUpdate.Location = new System.Drawing.Point(887, 277);
-            this.iconButtonUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.iconButtonUpdate.Location = new System.Drawing.Point(711, 233);
             this.iconButtonUpdate.Name = "iconButtonUpdate";
-            this.iconButtonUpdate.Size = new System.Drawing.Size(168, 44);
+            this.iconButtonUpdate.Size = new System.Drawing.Size(126, 36);
             this.iconButtonUpdate.TabIndex = 9;
             this.iconButtonUpdate.Text = "Update";
             this.iconButtonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -207,22 +200,20 @@ namespace AdvancedProgrammingAssignment2.View
             // textBoxId
             // 
             this.textBoxId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxId.Location = new System.Drawing.Point(675, 353);
-            this.textBoxId.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxId.Location = new System.Drawing.Point(547, 310);
             this.textBoxId.Multiline = true;
             this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(665, 27);
+            this.textBoxId.Size = new System.Drawing.Size(440, 23);
             this.textBoxId.TabIndex = 10;
             this.textBoxId.Visible = false;
             // 
             // textBoxSearch
             // 
             this.textBoxSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxSearch.Location = new System.Drawing.Point(16, 101);
-            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSearch.Location = new System.Drawing.Point(16, 91);
             this.textBoxSearch.Multiline = true;
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(471, 34);
+            this.textBoxSearch.Size = new System.Drawing.Size(391, 28);
             this.textBoxSearch.TabIndex = 11;
             // 
             // iconButtonSearch
@@ -239,10 +230,10 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonSearch.IconSize = 18;
             this.iconButtonSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconButtonSearch.Location = new System.Drawing.Point(496, 101);
+            this.iconButtonSearch.Location = new System.Drawing.Point(410, 91);
             this.iconButtonSearch.Margin = new System.Windows.Forms.Padding(0);
             this.iconButtonSearch.Name = "iconButtonSearch";
-            this.iconButtonSearch.Size = new System.Drawing.Size(139, 34);
+            this.iconButtonSearch.Size = new System.Drawing.Size(104, 28);
             this.iconButtonSearch.TabIndex = 12;
             this.iconButtonSearch.Text = "Search";
             this.iconButtonSearch.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -250,14 +241,32 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonSearch.UseVisualStyleBackColor = false;
             this.iconButtonSearch.Click += new System.EventHandler(this.iconButtonSearch_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 68);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(10, 524);
+            this.panel1.TabIndex = 13;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(1038, 68);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 524);
+            this.panel2.TabIndex = 14;
+            // 
             // CategoryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(1287, 626);
+            this.ClientSize = new System.Drawing.Size(1048, 592);
             this.ControlBox = false;
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.iconButtonSearch);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.textBoxId);
@@ -272,7 +281,6 @@ namespace AdvancedProgrammingAssignment2.View
             this.Controls.Add(this.labelTitle);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CategoryForm";
@@ -283,6 +291,10 @@ namespace AdvancedProgrammingAssignment2.View
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Panel panel2;
+
+        private System.Windows.Forms.Panel panel1;
 
         private System.Windows.Forms.TextBox textBoxSearch;
         private FontAwesome.Sharp.IconButton iconButtonSearch;
