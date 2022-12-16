@@ -10,7 +10,7 @@ namespace AdvancedProgrammingAssignment2.Model
         {
         }
 
-        public string Value { get; set; }
+        private string Value { get; set; }
 
         public static LoggedInClass GetInstance(string value)
         {

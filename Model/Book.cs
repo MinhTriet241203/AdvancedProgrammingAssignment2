@@ -7,7 +7,7 @@ namespace AdvancedProgrammingAssignment2.Model
     {
         [BsonId] internal ObjectId Id;
 
-        protected Book(string isbn, string bookName, string category, string author, string image)
+        protected internal Book(string isbn, string bookName, string category, string author, string image)
         {
             Isbn = isbn;
             BookName = bookName;

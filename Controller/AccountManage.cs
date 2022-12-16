@@ -27,36 +27,45 @@ namespace AdvancedProgrammingAssignment2.Controller
             return list;
         }
 
-        public static string availableAccountsCheck(string email)
-        {
-            //this check for valid account email
-            var filter = Builders<Account>.Filter.Eq("Email", email);
-            return Collection.Find(filter) != null ? "valid" : "invalid";
-        }
-
         //The three methods below are for adding accounts, Admin, librarian, and user accounts.
         public static void AddAdmin(string email, string name, string password)
         {
-            var adminAccount = new Admin(email.ToLower(), name, password);
+            Admin adminAccount = new Admin(email.ToLower(), name, password);
             Collection.InsertOne(adminAccount);
         }
 
         public static void AddLibrarian(string email, string name, string password)
         {
-            var librarianAccount = new Librarian(email.ToLower(), name, password);
+            Librarian librarianAccount = new Librarian(email.ToLower(), name, password);
             Collection.InsertOne(librarianAccount);
         }
 
-        public static void AddUser(string email, string name, string password)
+        public static string AddUser(string email, string name, string password)
         {
-            var userAccount = new User(email.ToLower(), name, password);
-            Collection.InsertOne(userAccount);
+            try
+            {
+                User userAccount = new User(email.ToLower(), name, password);
+                Collection.InsertOne(userAccount);
+                return "Account created successfully!";
+            }
+            catch (Exception)
+            {
+                return "Could not create account! Please check the list again.";
+            }
         }
 
         //this part delete accounts from db by matching [Id] to received [id]
-        public static void RemoveAccount(ObjectId id)
+        public static string RemoveAccount(ObjectId id)
         {
-            Collection.DeleteOne(a => a.Id == id);
+            try
+            {
+                Collection.DeleteOne(a => a.Id == id);
+                return "Account deleted successfully!";
+            }
+            catch (Exception)
+            {
+                return "Account deletion failed, please check if the account exists.";
+            }
         }
 
         public static void RemoveAccount(string email)
@@ -74,29 +83,5 @@ namespace AdvancedProgrammingAssignment2.Controller
             Collection.UpdateOne(a => a.Id == ObjectId.Parse(id), updateDefinition);
         }
 
-        //use the Login method by checking if the output is type string = "success"
-        public static string Login(string inputEmail, string inputPassword)
-        {
-            //normalise the email and add it to filter
-            var filter = Builders<Account>.Filter.Eq("Email", inputEmail.ToLower());
-            if (availableAccountsCheck(inputEmail)
-                .Equals("invalid")) return "invalid email"; //can set error and stuffs here.
-
-            try
-            {
-                var account = Collection.Find(filter).First();
-                var email = account.Email.ToLower();
-                var password = account.Password;
-                var accountClass = account.AccountClass;
-
-                if (email.Equals(inputEmail) && password.Equals(inputPassword)) return accountClass;
-
-                return "Email or password is incorrect";
-            }
-            catch (Exception)
-            {
-                return "Email not found";
-            }
-        }
     }
 }

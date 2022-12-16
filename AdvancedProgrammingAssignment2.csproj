@@ -309,6 +309,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Controller\AccountManage.cs" />
+        <Compile Include="Controller\AuthenticationController.cs" />
         <Compile Include="Controller\BookManage.cs" />
         <Compile Include="Controller\CategoryManage.cs" />
         <Compile Include="Model\Account.cs" />

@@ -75,8 +75,8 @@ namespace Testing2
         {
             var email = "user@mail.com";
             var password = "123";
-            Assert.True(AccountManage.Login(email, password).Equals("success"));
-            _testOutputHelper.WriteLine(AccountManage.Login(email, password));
+            Assert.True(AuthenticationController.Login(email, password).Equals("success"));
+            _testOutputHelper.WriteLine(AuthenticationController.Login(email, password));
         }
     }
 }

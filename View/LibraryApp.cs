@@ -121,7 +121,7 @@ namespace AdvancedProgrammingAssignment2.View
             Reset();
         }
 
-        private void Form_Close(object sender, EventArgs e)
+        private void LibraryApp_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
