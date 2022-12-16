@@ -29,16 +29,16 @@ namespace AdvancedProgrammingAssignment2.Controller
             //then over on the view side we can check the length of the books list 
         }
 
-        public static bool AddBook(string isbn, string bookName, string category, string author, string image)
+        public static string AddBook(string isbn, string bookName, string category, string author, string image)
         {
             var filter = Builders<Category>.Filter.Eq("CategoryName", category);
             if (CategoryCollection.Find(filter).CountDocuments() != 0)
             {
                 Book newBook = new Book(isbn, bookName, category, author, image);
-                return true;
+                return $"New book: \"{bookName}\" by \"{author}\" added successfully!";
             }
 
-            return false;
+            return $"Book \"{bookName}\" already exists, please try again.";
         }
 
         public static bool RemoveBook(ObjectId id)

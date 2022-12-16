@@ -28,18 +28,47 @@ namespace AdvancedProgrammingAssignment2.Controller
             _categoryList = CategoryCollection.Find(new BsonDocument()).ToList();
             return _categoryList;
         }
-        
-        //use the category constructor then insert the newly created category into the collection
-        public static void AddCategory(string categoryName)
+
+        public static bool CategoryExists(string categoryName)
         {
-            var newCategory = new Category(categoryName);
-            CategoryCollection.InsertOne(newCategory);
+            return CategoryCollection.CountDocuments(c => c.CategoryName.Equals(categoryName)) != 0;
+        }
+
+        //use the category constructor then insert the newly created category into the collection
+        public static string AddCategory(string categoryName)
+        {
+            try
+            {
+                if (!CategoryExists(categoryName))
+                {
+                    Category newCategory = new Category(categoryName);
+                    CategoryCollection.InsertOne(newCategory);
+                    return "Added new category \"" + categoryName + "\" successfully ";
+                }
+
+                return "Category \"" + categoryName + "\" already exists.";
+            }
+            catch (Exception)
+            {
+                return "Failed to add category \"" + categoryName + "\"";
+            }
+        }
+
+        //here is the search method, in implementation there should be a check for null result
+        public static Category SearchCategory(string categoryName)
+        {
+            if (CategoryExists(categoryName))
+            {
+                Category searchedCategory = CategoryCollection.Find(c => c.CategoryName == categoryName).First();
+                return searchedCategory;
+            }
+            return null;
         }
 
         //both the update and delete below needs to change the according books as well
         //thus the length of the methods themselves
 
-        public static bool DeleteCategory(string id)
+        public static string DeleteCategory(string id)
         {
             //get the category name from the id, and then query the books table
             //to check if there is any books left
@@ -51,13 +80,12 @@ namespace AdvancedProgrammingAssignment2.Controller
             var count = BookCollection.CountDocuments(b => b.Category.Equals(category));
 
             //check if there is any books left, false if not and delete then return true otherwise
-            if (count != 0) return false;
+            if (count != 0) return "There are still books left, cannot delete \"" + category + "\"";
             CategoryCollection.DeleteOne(c => c.Id == ObjectId.Parse(id));
-            Console.WriteLine($"Deleted category \"{category}\" successfully!");
-            return true;
+            return "Category deleted successfully!";
         }
 
-        public static void UpdateCategory(string id, string categoryName)
+        public static string UpdateCategory(string id, string categoryName)
         {
             //same as above, get category name and find all books matching
             var idFilter = Builders<Category>.Filter.Eq("_id", ObjectId.Parse(id));
@@ -72,6 +100,7 @@ namespace AdvancedProgrammingAssignment2.Controller
             //then update the category name.
             var updateDefinition = Builders<Category>.Update.Set(c => c.CategoryName, categoryName);
             CategoryCollection.UpdateOne(c => c.Id == ObjectId.Parse(id), updateDefinition);
+            return "Updated category name from \"" + category + "\" to \"" + categoryName + "\" successfully !";
         }
     }
 }

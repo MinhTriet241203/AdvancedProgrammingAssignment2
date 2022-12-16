@@ -54,7 +54,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.labelTitle.Location = new System.Drawing.Point(0, 0);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.labelTitle.Size = new System.Drawing.Size(1032, 66);
+            this.labelTitle.Size = new System.Drawing.Size(978, 66);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Category Management";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -63,7 +63,7 @@ namespace AdvancedProgrammingAssignment2.View
             // 
             this.separator.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.separator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.separator.Location = new System.Drawing.Point(12, 64);
+            this.separator.Location = new System.Drawing.Point(12, 65);
             this.separator.Margin = new System.Windows.Forms.Padding(0);
             this.separator.Name = "separator";
             this.separator.Size = new System.Drawing.Size(1012, 2);
@@ -75,12 +75,12 @@ namespace AdvancedProgrammingAssignment2.View
             this.dataGridViewCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCategory.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridViewCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCategory.Location = new System.Drawing.Point(12, 120);
+            this.dataGridViewCategory.Location = new System.Drawing.Point(12, 73);
             this.dataGridViewCategory.MultiSelect = false;
             this.dataGridViewCategory.Name = "dataGridViewCategory";
             this.dataGridViewCategory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridViewCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCategory.Size = new System.Drawing.Size(464, 452);
+            this.dataGridViewCategory.Size = new System.Drawing.Size(464, 502);
             this.dataGridViewCategory.TabIndex = 2;
             this.dataGridViewCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCategory_CellContentClick);
             // 
@@ -89,7 +89,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.labelCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelCategory.Font = new System.Drawing.Font("Lato", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
-            this.labelCategory.Location = new System.Drawing.Point(484, 120);
+            this.labelCategory.Location = new System.Drawing.Point(482, 88);
             this.labelCategory.Name = "labelCategory";
             this.labelCategory.Size = new System.Drawing.Size(544, 31);
             this.labelCategory.TabIndex = 3;
@@ -101,7 +101,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.labelName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelName.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
-            this.labelName.Location = new System.Drawing.Point(517, 164);
+            this.labelName.Location = new System.Drawing.Point(516, 144);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(121, 22);
             this.labelName.TabIndex = 4;
@@ -110,7 +110,7 @@ namespace AdvancedProgrammingAssignment2.View
             // textBoxName
             // 
             this.textBoxName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxName.Location = new System.Drawing.Point(507, 189);
+            this.textBoxName.Location = new System.Drawing.Point(506, 169);
             this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(500, 23);
@@ -129,7 +129,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonCreate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonCreate.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonCreate.IconSize = 30;
-            this.iconButtonCreate.Location = new System.Drawing.Point(507, 231);
+            this.iconButtonCreate.Location = new System.Drawing.Point(506, 225);
             this.iconButtonCreate.Name = "iconButtonCreate";
             this.iconButtonCreate.Size = new System.Drawing.Size(126, 36);
             this.iconButtonCreate.TabIndex = 7;
@@ -152,7 +152,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonDelete.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonDelete.IconSize = 30;
-            this.iconButtonDelete.Location = new System.Drawing.Point(881, 231);
+            this.iconButtonDelete.Location = new System.Drawing.Point(880, 225);
             this.iconButtonDelete.Name = "iconButtonDelete";
             this.iconButtonDelete.Size = new System.Drawing.Size(126, 36);
             this.iconButtonDelete.TabIndex = 8;
@@ -175,7 +175,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonUpdate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonUpdate.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButtonUpdate.IconSize = 30;
-            this.iconButtonUpdate.Location = new System.Drawing.Point(695, 231);
+            this.iconButtonUpdate.Location = new System.Drawing.Point(691, 225);
             this.iconButtonUpdate.Name = "iconButtonUpdate";
             this.iconButtonUpdate.Size = new System.Drawing.Size(126, 36);
             this.iconButtonUpdate.TabIndex = 9;
@@ -188,7 +188,7 @@ namespace AdvancedProgrammingAssignment2.View
             // textBoxId
             // 
             this.textBoxId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxId.Location = new System.Drawing.Point(507, 312);
+            this.textBoxId.Location = new System.Drawing.Point(506, 287);
             this.textBoxId.Multiline = true;
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(500, 23);
@@ -235,7 +235,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(1032, 576);
+            this.ClientSize = new System.Drawing.Size(978, 522);
             this.ControlBox = false;
             this.Controls.Add(this.iconButtonSearch);
             this.Controls.Add(this.textBoxSearch);

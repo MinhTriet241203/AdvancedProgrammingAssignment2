@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using AdvancedProgrammingAssignment2.Controller;
+
 namespace AdvancedProgrammingAssignment2.View
 {
     public partial class CategoryForm : Form
@@ -20,20 +21,29 @@ namespace AdvancedProgrammingAssignment2.View
 
         private void iconButtonCreate_Click(object sender, EventArgs e)
         {
-            CategoryManage.AddCategory(textBoxName.Text);
+            var result = CategoryManage.AddCategory(textBoxName.Text);
             dataGridViewCategory.DataSource = CategoryManage.ShowCategory();
+            MessageBox.Show(result, @"Message");
         }
 
         private void iconButtonUpdate_Click(object sender, EventArgs e)
         {
-            CategoryManage.UpdateCategory(textBoxId.Text, textBoxName.Text);
+            var result = CategoryManage.UpdateCategory(textBoxId.Text, textBoxName.Text);
             dataGridViewCategory.DataSource = CategoryManage.ShowCategory();
+            MessageBox.Show(result, @"Message");
         }
 
         private void iconButtonDelete_Click(object sender, EventArgs e)
         {
-            CategoryManage.DeleteCategory(textBoxId.Text);
-            dataGridViewCategory.DataSource = CategoryManage.ShowCategory();
+            var confirmResult = MessageBox.Show($@"Confirm delete of ""{textBoxName.Text}"" ?",
+                @"Confirm delete",
+                MessageBoxButtons.OKCancel);
+            if (confirmResult == DialogResult.OK)
+            {
+                var result = CategoryManage.DeleteCategory(textBoxId.Text);
+                dataGridViewCategory.DataSource = CategoryManage.ShowCategory();
+                MessageBox.Show(result, "Message");
+            }
         }
 
         private void iconButtonSearch_Click(object sender, EventArgs e)

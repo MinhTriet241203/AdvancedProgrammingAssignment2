@@ -47,5 +47,21 @@ namespace AdvancedProgrammingAssignment2.Controller
                 return "Email not found";
             }
         }
+
+        public static string RegisterAccount(string inputEmail, string inputName, string inputPassword)
+        {
+            //check for email availability
+            var checkResult = AvailableAccountsCheck(inputEmail);
+            if (checkResult == "invalid") return "Email is already in use, please try again.";
+            try
+            {
+                AccountManage.AddUser(inputEmail, inputName, inputPassword);
+                return "Created new account successfully!";
+            }
+            catch (Exception)
+            {
+                return "Something went wrong, please try again.";
+            }
+        }
     }
 }
