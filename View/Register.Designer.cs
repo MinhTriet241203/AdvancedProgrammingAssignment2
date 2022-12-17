@@ -133,6 +133,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.Controls.Add(this.Name);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.label6);
+            
             this.Text = "Register";
             this.ResumeLayout(false);
             this.PerformLayout();
