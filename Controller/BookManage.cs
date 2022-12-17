@@ -42,7 +42,7 @@ namespace AdvancedProgrammingAssignment2.Controller
             var filter = Builders<Category>.Filter.Eq("CategoryName", category);
             if (CategoryCollection.Find(filter).CountDocuments() != 0)
             {
-                Book newBook = new Book(isbn, bookName, category, author, image);
+                var newBook = new Book(isbn, bookName, category, author, image);
                 BookCollection.InsertOne(newBook);
                 return $"New book: \"{bookName}\" by \"{author}\" added successfully!";
             }

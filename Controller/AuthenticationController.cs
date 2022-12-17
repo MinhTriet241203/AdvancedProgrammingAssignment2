@@ -32,7 +32,7 @@ namespace AdvancedProgrammingAssignment2.Controller
                 .Equals("invalid")) return "invalid email"; //can set error and stuffs here.
             try
             {
-                Account account = Collection.Find(filter).First();
+                var account = Collection.Find(filter).First();
                 var email = account.Email.ToLower();
                 var password = account.Password;
                 var accountClass = account.AccountClass;

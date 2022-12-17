@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using AdvancedProgrammingAssignment2.Controller;
 
@@ -59,6 +58,12 @@ namespace AdvancedProgrammingAssignment2.View
                 dataGridViewBook.DataSource = CategoryManage.ShowCategory();
                 MessageBox.Show(@"No result for """ + textBoxSearch.Text + @""" :(", @"Message");
             }
+        }
+
+        private void buttonAddImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.ShowDialog();
         }
     }
 }

@@ -54,6 +54,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.labelState = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.buttonAddImage = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +67,8 @@ namespace AdvancedProgrammingAssignment2.View
             this.labelTitle.Location = new System.Drawing.Point(0, 0);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.labelTitle.Size = new System.Drawing.Size(1032, 66);
+            this.labelTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelTitle.Size = new System.Drawing.Size(1040, 66);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Book Management";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -78,7 +80,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.separator.Location = new System.Drawing.Point(0, 66);
             this.separator.Margin = new System.Windows.Forms.Padding(0);
             this.separator.Name = "separator";
-            this.separator.Size = new System.Drawing.Size(1032, 2);
+            this.separator.Size = new System.Drawing.Size(1040, 2);
             this.separator.TabIndex = 1;
             // 
             // dataGridViewBook
@@ -99,7 +101,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.dataGridViewBook.Name = "dataGridViewBook";
             this.dataGridViewBook.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridViewBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewBook.Size = new System.Drawing.Size(510, 464);
+            this.dataGridViewBook.Size = new System.Drawing.Size(510, 478);
             this.dataGridViewBook.TabIndex = 2;
             this.dataGridViewBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCategory_CellContentClick);
             // 
@@ -146,7 +148,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonCreate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonCreate.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonCreate.IconSize = 30;
-            this.iconButtonCreate.Location = new System.Drawing.Point(899, 395);
+            this.iconButtonCreate.Location = new System.Drawing.Point(899, 413);
             this.iconButtonCreate.Name = "iconButtonCreate";
             this.iconButtonCreate.Size = new System.Drawing.Size(126, 36);
             this.iconButtonCreate.TabIndex = 7;
@@ -168,7 +170,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonDelete.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonDelete.IconSize = 30;
-            this.iconButtonDelete.Location = new System.Drawing.Point(899, 517);
+            this.iconButtonDelete.Location = new System.Drawing.Point(899, 558);
             this.iconButtonDelete.Name = "iconButtonDelete";
             this.iconButtonDelete.Size = new System.Drawing.Size(126, 36);
             this.iconButtonDelete.TabIndex = 8;
@@ -190,7 +192,7 @@ namespace AdvancedProgrammingAssignment2.View
             this.iconButtonUpdate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.iconButtonUpdate.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButtonUpdate.IconSize = 30;
-            this.iconButtonUpdate.Location = new System.Drawing.Point(899, 457);
+            this.iconButtonUpdate.Location = new System.Drawing.Point(899, 488);
             this.iconButtonUpdate.Name = "iconButtonUpdate";
             this.iconButtonUpdate.Size = new System.Drawing.Size(126, 36);
             this.iconButtonUpdate.TabIndex = 9;
@@ -203,7 +205,7 @@ namespace AdvancedProgrammingAssignment2.View
             // textBoxId
             // 
             this.textBoxId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxId.Location = new System.Drawing.Point(539, 87);
+            this.textBoxId.Location = new System.Drawing.Point(546, 95);
             this.textBoxId.Multiline = true;
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(78, 23);
@@ -324,9 +326,9 @@ namespace AdvancedProgrammingAssignment2.View
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(550, 314);
+            this.pictureBox.Location = new System.Drawing.Point(552, 313);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(200, 250);
+            this.pictureBox.Size = new System.Drawing.Size(200, 281);
             this.pictureBox.TabIndex = 21;
             this.pictureBox.TabStop = false;
             // 
@@ -344,12 +346,17 @@ namespace AdvancedProgrammingAssignment2.View
             this.buttonAddImage.TabIndex = 22;
             this.buttonAddImage.Text = "Add image";
             this.buttonAddImage.UseVisualStyleBackColor = false;
+            this.buttonAddImage.Click += new System.EventHandler(this.buttonAddImage_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // BookForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(1032, 576);
+            this.ClientSize = new System.Drawing.Size(1040, 607);
             this.ControlBox = false;
             this.Controls.Add(this.buttonAddImage);
             this.Controls.Add(this.pictureBox);
@@ -387,12 +394,11 @@ namespace AdvancedProgrammingAssignment2.View
             this.PerformLayout();
         }
 
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+
         private System.Windows.Forms.PictureBox pictureBox;
 
         private System.Windows.Forms.Button buttonAddImage;
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-
         private System.Windows.Forms.TextBox textBoxCategory;
         private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.TextBox textBoxState;

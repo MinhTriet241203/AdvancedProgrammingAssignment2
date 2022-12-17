@@ -100,6 +100,7 @@ namespace AdvancedProgrammingAssignment2.View
         private void buttonBooks_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RgbColors.Color3);
+            OpenChildForm(new BookForm());
         }
 
         private void buttonAuthors_Click(object sender, EventArgs e)
@@ -132,13 +133,11 @@ namespace AdvancedProgrammingAssignment2.View
             public static readonly Color Color5 = Color.FromArgb(249, 88, 155);
             public static readonly Color Color6 = Color.FromArgb(24, 161, 251);
         }
-        
+
         //todo: implement a logout button that uses this
         ////code for logging out of the application since the class are used as singleton,
         ////we had to restart the application essentially
         // Application.Restart();
         // Environment.Exit(0);
-        
-        
     }
 }

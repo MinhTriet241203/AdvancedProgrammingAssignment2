@@ -30,7 +30,7 @@ namespace AdvancedProgrammingAssignment2.Controller
 
         public static List<Account> GetAllLibrarians()
         {
-            var list = Collection.AsQueryable().Where(a => a.AccountClass == "Librarians" ).ToList();
+            var list = Collection.AsQueryable().Where(a => a.AccountClass == "Librarians").ToList();
             return list;
         }
 
@@ -50,13 +50,13 @@ namespace AdvancedProgrammingAssignment2.Controller
         //The three methods below are for adding accounts, Admin, librarian, and user accounts.
         public static void AddAdmin(string email, string name, string password)
         {
-            Admin adminAccount = new Admin(email.ToLower(), name, password);
+            var adminAccount = new Admin(email.ToLower(), name, password);
             Collection.InsertOne(adminAccount);
         }
 
         public static void AddLibrarian(string email, string name, string password)
         {
-            Librarian librarianAccount = new Librarian(email.ToLower(), name, password);
+            var librarianAccount = new Librarian(email.ToLower(), name, password);
             Collection.InsertOne(librarianAccount);
         }
 
@@ -64,7 +64,7 @@ namespace AdvancedProgrammingAssignment2.Controller
         {
             try
             {
-                User userAccount = new User(email.ToLower(), name, password);
+                var userAccount = new User(email.ToLower(), name, password);
                 Collection.InsertOne(userAccount);
                 return "Account created successfully!";
             }

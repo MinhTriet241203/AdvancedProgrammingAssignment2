@@ -42,7 +42,7 @@ namespace AdvancedProgrammingAssignment2.Controller
             {
                 if (!CategoryExists(categoryName))
                 {
-                    Category newCategory = new Category(categoryName);
+                    var newCategory = new Category(categoryName);
                     CategoryCollection.InsertOne(newCategory);
                     return "Added new category \"" + categoryName + "\" successfully ";
                 }
@@ -58,13 +58,10 @@ namespace AdvancedProgrammingAssignment2.Controller
         //here is the search method, in implementation there should be a check for null result
         public static List<Category> SearchCategory(string categoryName)
         {
-            var queryExpr = new BsonRegularExpression(new Regex(categoryName, RegexOptions.IgnoreCase)); 
+            var queryExpr = new BsonRegularExpression(new Regex(categoryName, RegexOptions.IgnoreCase));
             var filter = Builders<Category>.Filter.Regex("categoryName", queryExpr);
             _categoryList = CategoryCollection.Find(filter).ToList();
-            if (_categoryList != null)
-            {
-                return _categoryList;
-            }
+            if (_categoryList != null) return _categoryList;
             return null;
         }
 
