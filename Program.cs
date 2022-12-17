@@ -7,7 +7,7 @@ namespace AdvancedProgrammingAssignment2
 {
     internal static class Program
     {
-        private const int ATTACH_PARENT_PROCESS = -1;
+        private const int AttachParentProcess = -1;
 
         /// <summary>
         ///     The main entry point for the application.
@@ -21,7 +21,7 @@ namespace AdvancedProgrammingAssignment2
         private static void Main()
         {
             //Init console for testing
-            AttachConsole(ATTACH_PARENT_PROCESS);
+            AttachConsole(AttachParentProcess);
 
             //Run the form
             Application.EnableVisualStyles();

@@ -23,16 +23,16 @@ namespace AdvancedProgrammingAssignment2.View
                 Hide();
 
                 //todo: add a login form intercepting this process
-                
+
                 //Create new LibraryApp.css file to run window
 
-                login login = new login();
-                
+                var login = new Login();
+
                 //Run LibraryApp.cs to open new window
 
-                LibraryApp log = new LibraryApp();
+                var log = new LibraryApp();
 
-                login.Show();
+                log.Show();
             }
         }
 

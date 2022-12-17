@@ -2,7 +2,7 @@ using System.ComponentModel;
 
 namespace AdvancedProgrammingAssignment2.View
 {
-    partial class login
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -318,7 +318,7 @@ namespace AdvancedProgrammingAssignment2.View
 
         private System.Windows.Forms.Panel panel1;
 
-        private System.Windows.Forms.TextBox UserName;
+        private System.Windows.Forms.TextBox Email;
 
         #endregion
     }

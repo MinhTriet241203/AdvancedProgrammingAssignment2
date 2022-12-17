@@ -2,7 +2,7 @@
 {
     public class User : Account
     {
-        protected internal User(string email, string name, string password) : base(email, name, password)
+        public User(string email, string name, string password) : base(email, name, password)
         {
             AccountClass = "User";
         }

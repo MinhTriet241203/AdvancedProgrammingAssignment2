@@ -1,10 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
+using System.Text.RegularExpressions;
 using AdvancedProgrammingAssignment2.Model;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using MongoDB.Driver.Linq;
 
 namespace AdvancedProgrammingAssignment2.Controller
 {
@@ -23,42 +22,73 @@ namespace AdvancedProgrammingAssignment2.Controller
 
         private static readonly IMongoCollection<Book> BookCollection = Database.GetCollection<Book>("Books");
 
-        private List<Category> _categoryList = new List<Category>();
+        private static List<Category> _categoryList = new List<Category>();
+
+        public static List<Category> ShowCategory()
+        {
+            _categoryList = CategoryCollection.Find(new BsonDocument()).ToList();
+            return _categoryList;
+        }
+
+        public static bool CategoryExists(string categoryName)
+        {
+            return CategoryCollection.CountDocuments(c => c.CategoryName.Equals(categoryName)) != 0;
+        }
 
         //use the category constructor then insert the newly created category into the collection
-        public static void AddCategory(string categoryName)
+        public static string AddCategory(string categoryName)
         {
-            Category newCategory = new Category(categoryName);
-            CategoryCollection.InsertOne(newCategory);
+            try
+            {
+                if (!CategoryExists(categoryName))
+                {
+                    var newCategory = new Category(categoryName);
+                    CategoryCollection.InsertOne(newCategory);
+                    return "Added new category \"" + categoryName + "\" successfully ";
+                }
+
+                return "Category \"" + categoryName + "\" already exists.";
+            }
+            catch (Exception)
+            {
+                return "Failed to add category \"" + categoryName + "\"";
+            }
+        }
+
+        //here is the search method, in implementation there should be a check for null result
+        public static List<Category> SearchCategory(string categoryName)
+        {
+            var queryExpr = new BsonRegularExpression(new Regex(categoryName, RegexOptions.IgnoreCase));
+            var filter = Builders<Category>.Filter.Regex("categoryName", queryExpr);
+            _categoryList = CategoryCollection.Find(filter).ToList();
+            if (_categoryList != null) return _categoryList;
+            return null;
         }
 
         //both the update and delete below needs to change the according books as well
         //thus the length of the methods themselves
 
-        public static bool DeleteCategory(ObjectId Id)
+        public static string DeleteCategory(string id)
         {
             //get the category name from the id, and then query the books table
             //to check if there is any books left
             //then allow for category deletion.
-            var filter = Builders<Category>.Filter.Eq("Id", Id);
+            var filter = Builders<Category>.Filter.Eq("_id", ObjectId.Parse(id));
 
             //this returns the name of the first category id matching
             var category = CategoryCollection.Find(filter).First().CategoryName;
-            var count = Convert.ToInt32(BookCollection.CountDocumentsAsync(b => b.Category.Equals(category)));
+            var count = BookCollection.CountDocuments(b => b.Category.Equals(category));
 
             //check if there is any books left, false if not and delete then return true otherwise
-            if (count != 0) return false;
-            CategoryCollection.DeleteOne(c => c.Id.Equals(Id));
-            Console.WriteLine($"Deleted category \"{category}\" successfully!");
-            return true;
-
-            //todo: add some interaction here if return false, or do so in the view part
+            if (count != 0) return "There are still books left, cannot delete \"" + category + "\"";
+            CategoryCollection.DeleteOne(c => c.Id == ObjectId.Parse(id));
+            return "Category deleted successfully!";
         }
 
-        public static void UpdateCategory(ObjectId Id, string categoryName)
+        public static string UpdateCategory(string id, string categoryName)
         {
             //same as above, get category name and find all books matching
-            var idFilter = Builders<Category>.Filter.Eq("Id", Id);
+            var idFilter = Builders<Category>.Filter.Eq("_id", ObjectId.Parse(id));
             var category = CategoryCollection.Find(idFilter).First().CategoryName;
 
             //definition to change towards
@@ -69,7 +99,8 @@ namespace AdvancedProgrammingAssignment2.Controller
 
             //then update the category name.
             var updateDefinition = Builders<Category>.Update.Set(c => c.CategoryName, categoryName);
-            CategoryCollection.UpdateOne(c => c.Id.Equals(Id), updateDefinition);
+            CategoryCollection.UpdateOne(c => c.Id == ObjectId.Parse(id), updateDefinition);
+            return "Updated category name from \"" + category + "\" to \"" + categoryName + "\" successfully !";
         }
     }
 }

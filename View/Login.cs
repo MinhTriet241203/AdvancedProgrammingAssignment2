@@ -1,39 +1,45 @@
 using System;
 using System.Windows.Forms;
+using AdvancedProgrammingAssignment2.Controller;
+using AdvancedProgrammingAssignment2.Model;
 
 namespace AdvancedProgrammingAssignment2.View
 {
-    public partial class login : Form
+    public partial class Login : Form
     {
+
         //Fields
         
         private readonly Panel panelRegister;
-        public login()
+
+
+        public Login()
+
         {
             InitializeComponent();
         }
         
 
-
-
-
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-
         private void LoginHandle(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            if (!string.IsNullOrEmpty(Email.Text))
+            {
+                var loginStatus = AuthenticationController.Login(Email.Text, Password.Text);
+                if (loginStatus == "Admin" ||
+                    loginStatus == "User" ||
+                    loginStatus == "Librarian")
+                {
+                    var authClass = LoggedInClass.GetInstance(loginStatus);
+                    //todo: transition to the dashboards
+                }
+            }
         }
 
         private void RegisterHandle(object sender, EventArgs e)
         {
+
             throw new System.NotImplementedException();
-            InitializeComponent().pnRegister.TabIndex = 9;
+            // InitializeComponent().pnRegister.TabIndex = 9;
 
         }
 
@@ -75,6 +81,7 @@ namespace AdvancedProgrammingAssignment2.View
         private void label1_Click_1(object sender, EventArgs e)
         {
             throw new System.NotImplementedException();
+
         }
     }
 }
