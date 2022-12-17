@@ -24,14 +24,15 @@ namespace AdvancedProgrammingAssignment2.View
 
                 //todo: add a login form intercepting this process
 
-                //Create new LibraryApp.css file to run window
-
-                var login = new Login();
+                
+                //Run LoginAndRegister.cs file
+                var login = new LoginAndRegister();
 
                 //Run LibraryApp.cs to open new window
 
                 var log = new LibraryApp();
-
+                
+                //Run program
                 log.Show();
             }
         }

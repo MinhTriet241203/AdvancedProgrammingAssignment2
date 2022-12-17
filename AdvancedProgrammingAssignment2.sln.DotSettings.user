@@ -8,14 +8,18 @@
     &lt;TestId&gt;xUnit::01284132-A854-48CC-979F-FFBBE6521F08::.NETFramework,Version=v4.8.1::Testing2.Tests.LoginTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FProperties_002FResources/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FBookForm/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FCategoryForm/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FProperties_002FResources/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FBookForm/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FCategoryForm/@EntryIndexedValue">False</s:Boolean>
 	
 
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FLibraryApp/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FLibraryApp/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002Flogin/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FLogin/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FLogin/@EntryIndexedValue">True</s:Boolean>
+	
+	
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FLoginAndRegister/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FProgessForm/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FProgressForm/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=AdvancedProgrammingAssignment2_002FView_002FRegister/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean></wpf:ResourceDictionary>
